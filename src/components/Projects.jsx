@@ -57,6 +57,8 @@ export const Projects = () => {
 
     const [selected, setSelected] = useState(null)
 
+    const isMobile = window.innerWidth < 768
+
     return (
         <FadeInSection id="projects">
             {
@@ -68,7 +70,7 @@ export const Projects = () => {
                     <>
                         <h2 id="about" className="text-3xl font-bold">Proyectos</h2>
                         <div className="flex flex-row justify-center gap-16 w-full items-center flex-wrap align-baseline">
-                            {projects.map((project) => <Card key={project.title} {...project} selected={selected} onClick={() => setSelected(project)} />)}
+                            {projects.map((project) => <Card key={project.title} {...project} selected={selected} onClick={() => {window.scrollTo({ top: isMobile ? 675 : 775, behavior: 'smooth' });setSelected(project)}} />)}
                         </div>
                     </>
             }
