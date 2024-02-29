@@ -39,7 +39,7 @@ const projects = [
         ]
     },
     {
-        title: "Surgical Guide AR",
+        title: "iDrill",
         body: "Software para la asistencia en las operaciones quirurgicas dentales en realidad aumentada.",
         advancedBody: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, nesciunt?",
         href: "https://github.com/marcocaballero/portfolio",
