@@ -131,7 +131,7 @@ export const About = () => {
         >
             <div
                 onMouseLeave={() => setSelected(null)}
-                className="flex items-center justify-center flex-col gap-8"
+                className="flex flex-col items-center justify-center flex-col gap-8"
             >
 
                 <h2 id="about" className="text-3xl font-bold">Sobre mí</h2>
@@ -146,7 +146,7 @@ export const About = () => {
 
                 <div
                     id="journey" 
-                    className="flex flex-col md:flex-row rounded-lg gap-4 h-[370px] md:h-[210px] overflow-x-auto md:w-[1250px] md:overflow-y-auto no-scrollbar">
+                    className="flex flex-col md:flex-row rounded-lg gap-4 md:h-[210px] overflow-x-hidden md:overflow-x-auto md:w-[1250px] overflow-y-auto md:overflow-y-hidden no-scrollbar">
                     {
                         sections.sort((a, b) => isMobile ? b.index - a.index : a.index - b.index).map((section, index) => {
                             return <Section 

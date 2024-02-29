@@ -73,6 +73,10 @@
         will-change: opacity, visibility;
     }
 
+    .fade-in-section:last-child {
+        padding-bottom: 0;
+    }
+
 }
 
 .card {
