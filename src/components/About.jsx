@@ -20,7 +20,7 @@ const sections = [
         index: 2,
         title: "Desarrollos independientes",
         role: "Desarrollador Fullstack",
-        year: "2018 - 2019",
+        year: "2019 - 2022",
         achievements: [{
             name: "Desarrollo de proyectos",
             url: "https://www.linkedin.com/in/marc-oller/details/projects/",
@@ -32,7 +32,7 @@ const sections = [
         index: 3,
         title: "IIM - Universistat Politecnica de València",
         role: "Investigador - Desarrollador Fullstack",
-        year: "2020 - 2022",
+        year: "2021 - 2022",
         achievements: [{
             name: "Grado de Tecnologías interactivas",
             url: "https://www.upv.es/titulaciones/GTI/",
@@ -112,12 +112,12 @@ export const About = () => {
                 setTimeout(() => {document.getElementById("journey").scrollTo({
                     top: 0,
                     behavior: 'smooth'
-                })}, ANIM_DURATION * 1000);
+                })}, 1500);
             } else {
                 setTimeout(() => {document.getElementById("journey").scrollTo({
                     left: 300,
                     behavior: 'smooth'
-                })}, ANIM_DURATION * 1000);
+                })}, 1500);
             }
         }
     }, [isVisible])
