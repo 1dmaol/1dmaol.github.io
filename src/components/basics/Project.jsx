@@ -9,8 +9,8 @@ export const Project = ({ title, image, body, advancedBody, github=null, stack, 
             animate={{ opacity: 1 }} initial={{ opacity: 0 }}
             className={"flex gap-4 flex-col w-full justify-center bg-white p-4 rounded-lg items-center cursor-pointer gap-2 shadow"}
         >
-            <div className="flex flex-col md:flex-row gap-2">
-                <div className="flex flex-col gap-2">
+            <div className="flex flex-col md:flex-row gap-2 md:w-full">
+                <div className="flex flex-col gap-2 md:flex-grow">
                     <div className="flex flex-row gap-2 items-center">
                         <IoArrowBackOutline className="text-2xl hover:cursor-pointer hover:scale-110 transition" onClick={onClick} />
 
