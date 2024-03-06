@@ -2,8 +2,9 @@ import { IoArrowBackOutline } from "react-icons/io5";
 import { GitHub } from "./GitHub";
 import { Tag } from "./Tag";
 import { motion } from "framer-motion"
+import { LinkedIn } from "./LinkedIn";
 
-export const Project = ({ title, image, body, advancedBody, github=null, stack, onClick }) => {
+export const Project = ({ title, image=null, body, advancedBody, github=null, stack, onClick }) => {
     return (
         <motion.div
             animate={{ opacity: 1 }} initial={{ opacity: 0 }}
@@ -35,7 +36,7 @@ export const Project = ({ title, image, body, advancedBody, github=null, stack, 
                     </div>
                 </div>
 
-                <img src={image} alt="logo" className={`flex h-[250px] md:h-[350px] items-center align-center rounded-lg object-contain md:object-cover`} />
+                {image && <img src={image} alt="logo" className={`flex h-[250px] md:h-[350px] items-center align-center rounded-lg object-contain md:object-cover`} />}
             </div>
 
         </motion.div>

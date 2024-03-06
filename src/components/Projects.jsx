@@ -51,6 +51,14 @@ const projects = [
             "C#",
             "AR"
         ]
+    },
+    {
+        title: "Ver más proyectos...",
+        body: "Pulsa para ver todos mis proyectos en LinkedIn.",
+        href: "https://www.linkedin.com/in/marc-oller/details/projects/",
+        redirect: true,
+        stack: [
+        ]
     }
 ];
 
@@ -81,7 +89,20 @@ export const Projects = () => {
                         {
                             isMobile ?
                                 <div className="flex flex-col justify-center gap-8 w-full items-center flex-wrap align-baseline">
-                                    {projects.slice((page * MAX_ELEMENTS), (page * MAX_ELEMENTS) + MAX_ELEMENTS).map((project) => <Card key={project.title} {...project} selected={selected} onClick={() => { window.scrollTo({ top: 675 , behavior: 'smooth' }); setSelected(project) }} />)}
+                                    {projects.slice((page * MAX_ELEMENTS), (page * MAX_ELEMENTS) + MAX_ELEMENTS).map((project) => 
+                                        <Card key={project.title} {...project} selected={selected}
+                                            onClick={() => { 
+                                                window.scrollTo({ top: 675 , behavior: 'smooth' });
+                                                if(project.redirect)
+                                                    window.open(
+                                                        project.href,
+                                                        '_blank'
+                                                    );
+                                                else
+                                                    setSelected(project) 
+                                            }} 
+                                        />
+                                    )}
 
                                         <div className="flex flex-row justify-between w-full">
                                             {page !== 0 ?
@@ -101,7 +122,20 @@ export const Projects = () => {
                                             <IoIosArrowBack />
                                         </div>}
                                     <div className="flex flex-row justify-center gap-16 w-[1200px] items-center flex-wrap align-baseline">
-                                        {projects.slice((page * MAX_ELEMENTS), (page * MAX_ELEMENTS) + MAX_ELEMENTS).map((project) => <Card key={project.title} {...project} selected={selected} onClick={() => { window.scrollTo({ top: isMobile ? 675 : 775, behavior: 'smooth' }); setSelected(project) }} />)}
+                                        {projects.slice((page * MAX_ELEMENTS), (page * MAX_ELEMENTS) + MAX_ELEMENTS).map((project) => 
+                                            <Card key={project.title} {...project} selected={selected} 
+                                                onClick={() => { 
+                                                    window.scrollTo({ top: isMobile ? 675 : 775, behavior: 'smooth' }); 
+                                                    if(project.redirect)
+                                                        window.open(
+                                                            project.href,
+                                                            '_blank'
+                                                          );
+                                                    else
+                                                        setSelected(project) 
+                                                }} 
+                                            />
+                                        )}
                                     </div>
                                     {!isLastPage &&
                                             <div onClick={() => { setPage(page + 1) }} className="bg-white md:absolute md:right-14 rounded-full p-2 hover:scale-125 transition cursor-pointer shadow">
