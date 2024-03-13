@@ -1,8 +1,11 @@
+import { useState } from "react";
 import { LinkedIn } from "./LinkedIn";
 import { Tag } from "./Tag";
 import { motion } from "framer-motion";
 
 export const Card = ({ title, image = null, body, stack, redirect=false, onClick }) => {
+
+    const [loading, setLoading] = useState(true)
 
     return (
         <motion.div onClick={onClick}
@@ -10,7 +13,8 @@ export const Card = ({ title, image = null, body, stack, redirect=false, onClick
                 className={"item flex gap-4 flex-col w-full md:w-[320px] hover:scale-105 transition bg-white p-4 rounded-lg items-center cursor-pointer gap-2 shadow h-[435px] " + (redirect ? "justify-around" : "justify-between")}
         >
             <div className="flex flex-col gap-2">
-                {image && <img src={image} alt="logo" className={`flex h-[175px] md:w-[300px] rounded-lg object-cover`} />}
+                {loading && <div class="image-placeholder placeholder"/>}
+                {image && <img src={image} id="image" onLoad={() => setLoading(false)} alt="logo" className={`aspect-[16/10] md:w-[300px] rounded-lg object-cover ` + (loading ? "hidden" : "flex")} />}
                 <a>
                     <h2 className="text-lg font-bold py-2">
                         {title}

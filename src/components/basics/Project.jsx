@@ -5,6 +5,7 @@ import { motion } from "framer-motion"
 import { LinkedIn } from "./LinkedIn";
 
 export const Project = ({ title, image=null, body, advancedBody, github=null, stack, onClick }) => {
+    
     return (
         <motion.div
             animate={{ opacity: 1 }} initial={{ opacity: 0 }}
