@@ -3,18 +3,17 @@ import { Card } from "./basics/Card"
 import { Project } from "./basics/Project";
 import FadeInSection from "./basics/FadeInSection";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import { currentProjectsHeight } from "../consts/sizes";
 
 const projects = [
     {
         title: "Enso",
         body: "Aplicación de código abierto para controlar los gastos entre tus amigos de una forma sencilla.",
-        advancedBody: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, nesciunt?",
+        advancedBody: "Incorpora la posibilidad de almacenar en la nube todos los gastos registrados en la aplicación.",
         href: "https://github.com/marcocaballero/portfolio",
+        website: "https://enso-prototype.onrender.com/",
         image: new URL('../assets/EnsoIphoneMac.png', import.meta.url).href,
-        github: {
-            namespace: "1dmaol",
-            repo: "Enso"
-        },
+        //github: { namespace: "1dmaol", repo: "Enso" },
         stack: [
             "React",
             "Google Drive",
@@ -26,7 +25,7 @@ const projects = [
     {
         title: "Viking Centro",
         body: "Aplicación para la administración de las membresías y los centros deportivos.",
-        advancedBody: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, nesciunt?",
+        advancedBody: "Incluye una dashboard donde poder ver toda la información de los clientes y un sistema de reservas.",
         href: "https://github.com/marcocaballero/portfolio",
         image: new URL('../assets/VikingCentroIphone15.png', import.meta.url).href,
         stack: [
@@ -42,9 +41,15 @@ const projects = [
     {
         title: "iDrill",
         body: "Software para la asistencia en las operaciones quirurgicas dentales en realidad aumentada.",
-        advancedBody: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, nesciunt?",
+        advancedBody: "Funcionalidades innovadoras como asistencia de voz, compatibilidad con cualquier estuche quirúrgico...",
         href: "https://github.com/marcocaballero/portfolio",
         image: new URL('../assets/setupiDrill.png', import.meta.url).href,
+        awards: [
+            {   
+                title: "🥇 Mejor TFG de la promoción",        
+                url: "https://www.linkedin.com/feed/update/urn:li:activity:7026505574502514688/",
+            }
+        ],
         stack: [
             "React",
             "Unity",
@@ -92,7 +97,7 @@ export const Projects = () => {
                                     {projects.slice((page * MAX_ELEMENTS), (page * MAX_ELEMENTS) + MAX_ELEMENTS).map((project) => 
                                         <Card key={project.title} {...project} selected={selected}
                                             onClick={() => { 
-                                                window.scrollTo({ top: 675 , behavior: 'smooth' });
+                                                window.scrollTo({ top: currentProjectsHeight , behavior: 'smooth' });
                                                 if(project.redirect)
                                                     window.open(
                                                         project.href,
@@ -125,14 +130,15 @@ export const Projects = () => {
                                         {projects.slice((page * MAX_ELEMENTS), (page * MAX_ELEMENTS) + MAX_ELEMENTS).map((project) => 
                                             <Card key={project.title} {...project} selected={selected} 
                                                 onClick={() => { 
-                                                    window.scrollTo({ top: isMobile ? 675 : 775, behavior: 'smooth' }); 
-                                                    if(project.redirect)
-                                                        window.open(
-                                                            project.href,
-                                                            '_blank'
-                                                          );
-                                                    else
-                                                        setSelected(project) 
+                                                    window.scrollTo({ top: currentProjectsHeight, behavior: 'smooth' }); 
+                                                    
+                                                if(project.redirect)
+                                                    window.open(
+                                                        project.href,
+                                                        '_blank'
+                                                    );
+                                                else
+                                                    setSelected(project) 
                                                 }} 
                                             />
                                         )}
