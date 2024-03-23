@@ -57,7 +57,7 @@ export const Project = ({ title, image=null, body, github=null, stack, onClick, 
                     <p className="font-bold text-2xl">{body}</p>
 
                     {achievements &&
-                        <motion.p className="md:h-[20px]" 
+                        <motion.p className="h-[125px] md:h-[20px] flex items-center justify-center" 
                             animate={ fadeIn ? { opacity: 1 } : { opacity: 0 } } 
                             initial={ fadeIn ? { opacity: 0 } : { opacity: 1 } }
                             >
