@@ -115,27 +115,6 @@ export const About = () => {
             }, ANIM_DURATION * 1000)
         }
     }, [selected])
-/*
-    useEffect(() => {
-        if (isVisible) {
-            if (isMobile) {
-                document.getElementById("journey").scrollTo(0, 350)
-                setTimeout(() => {
-                    document.getElementById("journey").scrollTo({
-                        top: 0,
-                        behavior: 'smooth'
-                    })
-                }, 1500);
-            } else {
-                setTimeout(() => {
-                    document.getElementById("journey").scrollTo({
-                        left: 300,
-                        behavior: 'smooth'
-                    })
-                }, 3500);
-            }
-        }
-    }, [isVisible]) */
 
     useEffect(() => {
         if (!autoReplay) return;

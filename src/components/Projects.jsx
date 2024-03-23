@@ -9,8 +9,13 @@ const projects = [
     {
         title: "Enso",
         body: "Aplicación de código abierto para controlar los gastos entre tus amigos de una forma sencilla.",
-        advancedBody: "Incorpora la posibilidad de almacenar en la nube todos los gastos registrados en la aplicación.",
         href: "https://github.com/marcocaballero/portfolio",
+        achievements: [
+            {
+                title: "Incorpora la posibilidad de almacenar en la nube todos los gastos registrados en la aplicación.",
+                image: new URL('../assets/EnsoIphoneMac.png', import.meta.url).href
+            }
+        ],
         website: "https://enso-prototype.onrender.com/",
         image: new URL('../assets/EnsoIphoneMac.png', import.meta.url).href,
         //github: { namespace: "1dmaol", repo: "Enso" },
@@ -24,8 +29,21 @@ const projects = [
     },
     {
         title: "Viking Centro",
-        body: "Aplicación para la administración de las membresías y los centros deportivos.",
-        advancedBody: "Incluye una dashboard donde poder ver toda la información de los clientes y un sistema de reservas.",
+        body: "Desarrollo fullstack para la gestión del centro deportivo Viking Centro.",
+        achievements: [
+            {
+                title: "Aplicación para la administración de las membresías de los miembros. (IOS y Android)",
+                image: new URL('../assets/VikingCentroIphone15.png', import.meta.url).href
+            },
+            {
+                title: "Incluye una dashboard donde poder ver toda la información de los clientes y un sistema de reservas, accesible tanto desde la aplicación como la página web.",
+                image: new URL('../assets/VikingCentroIphone15.png', import.meta.url).href
+            },
+            {
+                title: "Servidor Java Springboot dockerizado para la gestión de las peticiones a la base de datos Postgres.",
+                image: new URL('../assets/VikingCentroIphone15.png', import.meta.url).href
+            },
+        ],
         href: "https://github.com/marcocaballero/portfolio",
         image: new URL('../assets/VikingCentroIphone15.png', import.meta.url).href,
         stack: [
@@ -33,16 +51,22 @@ const projects = [
             "React Native",
             "Postgres",
             "Springboot",
-            "Tailwind",
             "Typescript",
-            "Render.com",
+            "IOS",
+            "Android",
+            "Docker"
         ]
     },
     {
         title: "iDrill",
         body: "Software para la asistencia en las operaciones quirurgicas dentales en realidad aumentada.",
-        advancedBody: "Funcionalidades innovadoras como asistencia de voz, compatibilidad con cualquier estuche quirúrgico...",
         href: "https://github.com/marcocaballero/portfolio",
+        achievements: [
+            {
+                title: "Funcionalidades innovadoras como asistencia de voz, compatibilidad con cualquier estuche quirúrgico...",
+                image: new URL('../assets/setupiDrill.png', import.meta.url).href
+            }
+        ],
         image: new URL('../assets/setupiDrill.png', import.meta.url).href,
         awards: [
             {   
