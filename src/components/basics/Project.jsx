@@ -94,7 +94,7 @@ export const Project = ({ title, image=null, body, github=null, stack, onClick, 
                 </div>
 
                 {achievements && 
-                    <img src={achievements[position].image} alt="logo" className={`flex h-[250px] md:h-[350px] w-[250px] md:w-[500px] aspect-[16/10] items-center align-center rounded-lg object-contain md:object-fill`} />
+                    <img src={achievements[position].image} alt="logo" className={`flex h-[250px] md:h-[350px] md:w-[500px] aspect-[16/10] items-center align-center rounded-lg object-contain md:object-fill`} />
                 }
 
 
