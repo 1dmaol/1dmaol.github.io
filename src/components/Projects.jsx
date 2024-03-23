@@ -29,7 +29,7 @@ const projects = [
     },
     {
         title: "Viking Centro",
-        body: "Desarrollo fullstack para la gestión del centro deportivo Viking Centro.",
+        body: "Desarrollo fullstack para la gestión de Viking Centro.",
         achievements: [
             {
                 title: "Aplicación para la administración de las membresías de los miembros. (IOS y Android)",
