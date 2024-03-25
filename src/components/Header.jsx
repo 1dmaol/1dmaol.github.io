@@ -1,14 +1,13 @@
+import { useEffect, useState } from "react"
 import { currentAboutHeight, currentProjectsHeight } from "../consts/sizes"
 
-export const Header = () => {
-
-    console.log(currentAboutHeight, currentProjectsHeight)
+export const Header = ({nightMode}) => {
 
     return (
         <header className="flex justify-between items-center absolute md:left-20 md:right-20">
             <a href="https://1dmaol.github.io/">
                 <img
-                    className="rounded-full w-20 h-22 bg-[url('/assets/mezz.png')] hover:scale-110 transition"
+                    className="rounded-full w-20 h-22 hover:scale-110 transition"
                     src={new URL('../assets/mepp.png', import.meta.url).href}
                     alt="logo" />
             </a>

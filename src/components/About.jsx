@@ -128,7 +128,7 @@ export const About = () => {
                 })
             } else if (currentIndex === 1) {
                 document.getElementById("journey").scrollTo({
-                    left: 300,
+                    left: 350,
                     behavior: 'smooth'
                 })
             }

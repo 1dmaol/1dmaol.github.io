@@ -41,7 +41,7 @@
 }
 
 .placeholder {
-    background: #eee;
+    background: #d5d5d5;
     border-radius: 1rem;
     position: relative;
     overflow: hidden;
@@ -57,7 +57,7 @@
     left: 0;
     bottom: 0;
     width: 100px;
-    background: linear-gradient(90deg, #eee, #f4f4f4, #eee);
+    background: linear-gradient(90deg, #d5d5d5, #e0e0e0, #d5d5d5);
     animation: gradient 1s infinite ease-in-out;
   }
 

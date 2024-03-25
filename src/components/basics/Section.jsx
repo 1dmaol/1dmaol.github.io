@@ -7,11 +7,11 @@ export const Section = ({ onMouseOver, onClick, section, selected }) => {
     return (
         <div onMouseOver={onMouseOver} onClick={onClick} className={"flex flex-col min-w-[300px] gap-4 text-slate-400 hover:text-black transition cursor-default tooltip"}>
             
-                <div className={"rounded-full border-4 w-10 h-10 self-center flex items-center justify-center " + (selected?"border-black":"border-slate-400")}>
-                    <p className={"text-center font-bold text-lg"+ (selected ? " text-black" : "")}>{section.index}</p>
+                <div className={"rounded-full border-4 w-10 h-10 self-center flex items-center justify-center " + (selected?"border-black dark:border-white":"border-slate-400")}>
+                    <p className={"text-center font-bold text-lg"+ (selected ? " text-black dark:text-white" : "")}>{section.index}</p>
                 </div>
                 <div className="flex flex-col">
-            <div className={"flex flex-col overflow-hidden hover:scale-105 transition" + (selected ? " scale-105 text-black" : "")}>
+            <div className={"flex flex-col overflow-hidden hover:scale-105 transition" + (selected ? " scale-105 text-black dark:text-white" : "")}>
                 <h2 className="whitespace-nowrap">{section.title}</h2>
                 <h2 className="whitespace-nowrap">{section.role}</h2>
                 <h2 className="whitespace-nowrap">{section.year}</h2>

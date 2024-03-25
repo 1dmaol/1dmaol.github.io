@@ -100,7 +100,7 @@ export const Project = ({ title, image=null, body, github=null, stack, onClick, 
 
             </div>
 
-            <div className={"bg-white py-2 px-4 m-8 rounded-full cursor-pointer shadow-xl hover:scale-105 transition"} onClick={onClick}>
+            <div className={"bg-white py-2 px-4 m-8 rounded-full cursor-pointer shadow-xl hover:scale-105 transition dark:bg-slate-800 dark:text-white"} onClick={onClick}>
                 Volver a los proyectos
             </div>
             {/*<IoArrowBackOutline className="text-2xl hover:cursor-pointer hover:scale-110 transition" onClick={onClick} />*/}

@@ -100,7 +100,6 @@ export const Projects = () => {
     const MAX_ELEMENTS = isMobile ? 2 : window.innerWidth < 1200 ? window.innerWidth < 810 ? 1 : 2 : 3;
     const [isLastPage, setIsLastPage] = useState(projects.length <= (MAX_ELEMENTS * page) + MAX_ELEMENTS)
 
-
     useEffect(() => {
         setIsLastPage(projects.length <= (MAX_ELEMENTS * page) + MAX_ELEMENTS)
     }, [page])
@@ -135,11 +134,11 @@ export const Projects = () => {
 
                                         <div className="flex flex-row justify-between w-full">
                                             {page !== 0 ?
-                                                <div onClick={() => { setPage(page - 1) }} className="bg-white rounded-full p-2 cursor-pointer shadow">
+                                                <div onClick={() => { setPage(page - 1) }} className="bg-white dark:bg-slate-800 rounded-full p-2 cursor-pointer shadow">
                                                     <IoIosArrowBack />
                                                 </div> : <div></div>}
                                             {!isLastPage &&
-                                            <div onClick={() => { setPage(page + 1) }} className="bg-white rounded-full p-2 cursor-pointer shadow ">
+                                            <div onClick={() => { setPage(page + 1) }} className="bg-white dark:bg-slate-800 rounded-full p-2 cursor-pointer shadow ">
                                                 <IoIosArrowForward />
                                             </div>}
                                         </div>
@@ -147,7 +146,7 @@ export const Projects = () => {
                                 :
                                 <div className="flex flex-row gap-8 justify-center items-center">
                                     {page !== 0 &&
-                                        <div onClick={() => { setPage(page - 1) }} className="bg-white absolute left-14 rounded-full p-2 hover:scale-125 transition cursor-pointer shadow">
+                                        <div onClick={() => { setPage(page - 1) }} className="bg-white dark:bg-slate-800 absolute left-14 rounded-full p-2 hover:scale-125 transition cursor-pointer shadow">
                                             <IoIosArrowBack />
                                         </div>}
                                     <div className="flex flex-row justify-center gap-16 w-[1200px] items-center flex-wrap align-baseline">
@@ -168,7 +167,7 @@ export const Projects = () => {
                                         )}
                                     </div>
                                     {!isLastPage &&
-                                            <div onClick={() => { setPage(page + 1) }} className="bg-white md:absolute md:right-14 rounded-full p-2 hover:scale-125 transition cursor-pointer shadow">
+                                            <div onClick={() => { setPage(page + 1) }} className="bg-white dark:bg-slate-800 md:absolute md:right-14 rounded-full p-2 hover:scale-125 transition cursor-pointer shadow">
                                                 <IoIosArrowForward />
                                             </div>}
                                 </div>
