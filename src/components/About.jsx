@@ -2,82 +2,85 @@ import { useEffect, useState } from "react"
 import FadeInSection from "./basics/FadeInSection"
 import { Section } from "./basics/Section"
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
-const quotes = [
-    "La programación es una forma de pensar. El pensamiento es la forma de programar.",
-    "Mi iniciativa para desarrollar proyectos propios, reflejando creatividad y habilidades técnicas, se han convertido en oportunidades para explorar nuevas ideas y enfoques, consolidando mi experiencia.",
-    "La investigación es una idónea iniciativa para contribuir en un impacto positivo en la sociedad y asentar los conceptos de la programación.",
-    "En el futuro, aspiro a convertirme en un arquitecto de software. Mi pasión y dedicación a la mejora continua me impulsan constantemente a aprender y evolucionar en este dinámico mundo de la programación.",
-    "¡Gracias por visitar mi portfolio! Estoy emocionado por el futuro y ansioso por contribuir a proyectos que marquen la diferencia en el mundo tecnológico."
-]
-
-const sections = [
-    {
-        index: 1,
-        title: "Indra Studios (Londres)",
-        role: "Desarrollador Fullstack",
-        year: "2018 - 2019",
-        achievements: [{
-            name: "Desarrollo de Aplicaciones",
-            url: "https://todofp.es/que-estudiar/loe/informatica-comunicaciones/des-aplicaciones-multiplataforma.html",
-            type: "🎓"
-        }],
-        quote: quotes[0]
-    },
-    {
-        index: 2,
-        title: "Desarrollos independientes",
-        role: "Desarrollador Fullstack",
-        year: "2019 - 2022",
-        achievements: [{
-            name: "Desarrollo de proyectos",
-            url: "https://www.linkedin.com/in/marc-oller/details/projects/",
-            type: "🧑🏻‍💻"
-        }],
-        quote: quotes[1]
-    },
-    {
-        index: 3,
-        title: "IIM - Universistat Politecnica de València",
-        role: "Investigador - Desarrollador Fullstack",
-        year: "2021 - 2022",
-        achievements: [{
-            name: "Grado de Tecnologías interactivas",
-            url: "https://www.upv.es/titulaciones/GTI/",
-            type: "🎓"
-        }, {
-            name: "Mejor TFG de la promoción (iDrill)",
-            url: "https://www.linkedin.com/feed/update/urn:li:activity:7026505574502514688/",
-            type: "🥇"
-        }],
-        quote: quotes[2]
-    },
-    {
-        index: 4,
-        title: "Panel Sistemas Informáticos",
-        role: "Desarrollador Backend",
-        year: "Septiembre 2022 - Actualidad",
-        quote: quotes[3]
-    },
-    {
-        index: 5,
-        title: "Freelancer",
-        role: "Desarrollador Full Stack",
-        year: "Septiembre 2023 - Actualidad",
-        achievements: [{
-            name: "Desarrollo de Enso",
-            url: "https://enso-prototype.onrender.com/",
-            type: "🧑🏻‍💻"
-        }, {
-            name: "Desarrollo de Viking Centros",
-            url: "https://vikingcentro.com/",
-            type: "🧑🏻‍💻"
-        }],
-        quote: quotes[4]
-    }
-]
 
 export const About = () => {
+    const { t } = useTranslation()
+
+    const quotes = [
+        t("about_quote1"),
+        t("about_quote2"),
+        t("about_quote3"),
+        t("about_quote4"),
+        t("about_quote5"),
+    ]
+    
+    const sections = [
+        {
+            index: 1,
+            title: "Indra Studios ("+ t('london') +")",
+            role: t("subtitle"),
+            year: "2018 - 2019",
+            achievements: [{
+                name: t("app_developer_degree"),
+                url: "https://todofp.es/que-estudiar/loe/informatica-comunicaciones/des-aplicaciones-multiplataforma.html",
+                type: "🎓"
+            }],
+            quote: quotes[0]
+        },
+        {
+            index: 2,
+            title: t('side_project_role'),
+            role: t("subtitle"),
+            year: "2019 - 2022",
+            achievements: [{
+                name: t("project_developer_role"),
+                url: "https://www.linkedin.com/in/marc-oller/details/projects/",
+                type: "🧑🏻‍💻"
+            }],
+            quote: quotes[1]
+        },
+        {
+            index: 3,
+            title: "IIM - Universistat Politecnica de València",
+            role: t("researcher_role") + " - " + t("subtitle"),
+            year: "2021 - 2022",
+            achievements: [{
+                name: t("it_degree"),
+                url: "https://www.upv.es/titulaciones/GTI/",
+                type: "🎓"
+            }, {
+                name: t("best_tfg") + " (iDrill)",
+                url: "https://www.linkedin.com/feed/update/urn:li:activity:7026505574502514688/",
+                type: "🥇"
+            }],
+            quote: quotes[2]
+        },
+        {
+            index: 4,
+            title: "Panel Sistemas Informáticos",
+            role: t("backend_role"),
+            year: "2022 - " + t("currently"),
+            quote: quotes[3]
+        },
+        {
+            index: 5,
+            title: "Freelancer",
+            role: t("subtitle"),
+            year: "2023 - " + t("currently"),
+            achievements: [{
+                name: t("project_enso_title"),
+                url: "https://enso-prototype.onrender.com/",
+                type: "🧑🏻‍💻"
+            }, {
+                name: t("project_viking_title"),
+                url: "https://vikingcentro.com/",
+                type: "🧑🏻‍💻"
+            }],
+            quote: quotes[4]
+        }
+    ]
 
     const isMobile = window.innerWidth < 768
     const journeyCardHeight = 140;
@@ -151,14 +154,13 @@ export const About = () => {
                 className="flex flex-col items-center justify-center flex-col gap-8"
             >
 
-                <h2 id="about" className="text-3xl font-bold">Sobre mí</h2>
+                <h2 id="about" className="text-3xl font-bold">{t('about')}</h2>
 
                 <span>
-                    ¡Hola! Soy un apasionado desarrollador fullstack con experiencia
-                    en la creación de soluciones eficientes y atractivas.
+                    {t('about_title')}
                     <br />
                     <br />
-                    Este es mi recorrido:
+                    {t('about_subtitle')}
                 </span>
 
                 <div
@@ -183,7 +185,8 @@ export const About = () => {
                                         })
                                     }
                                 }}
-                                key={index} section={section} selected={selected === section} />
+                                key={index} section={section} 
+                                selected={selected.index === section.index} />
                         })
                     }
                 </div>

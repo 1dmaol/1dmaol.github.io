@@ -4,9 +4,12 @@ import { Tag } from "./Tag";
 import { motion } from "framer-motion"
 import { LinkedIn } from "./LinkedIn";
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 export const Project = ({ title, image=null, body, github=null, stack, onClick, href=null, website=null, awards=null, achievements=null }) => {
     
+    const { t } = useTranslation()
+
     const [position, setPosition] = useState(0)
     const [fadeIn, setFadeIn] = useState(true)
     const [animProgress, setAnimProgress] = useState(0)
@@ -69,7 +72,7 @@ export const Project = ({ title, image=null, body, github=null, stack, onClick, 
 
                     {website && 
                         <div className={"w-fit h-fit text-sm bg-[#2157AA] text-white p-2 rounded-lg cursor-pointer shadow-xl flex self-center"} onClick={()=>window.open(website, "_blank")}>
-                            Acceder a la página web
+                            {t('go_to_website')}
                         </div> 
                     }
 
@@ -101,7 +104,7 @@ export const Project = ({ title, image=null, body, github=null, stack, onClick, 
             </div>
 
             <div className={"bg-white py-2 px-4 m-8 rounded-full cursor-pointer shadow-xl hover:scale-105 transition dark:bg-slate-800 dark:text-white"} onClick={onClick}>
-                Volver a los proyectos
+                {t("project_back")}
             </div>
             {/*<IoArrowBackOutline className="text-2xl hover:cursor-pointer hover:scale-110 transition" onClick={onClick} />*/}
 

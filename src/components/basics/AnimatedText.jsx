@@ -1,6 +1,15 @@
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 function AnimatedText({text, className}) {
+
+    const { i18n } = useTranslation()
+    const [delay, setDelay] = useState(10)
+
+    useEffect(() => {
+        setDelay(1000)
+    }, [i18n.language])
 
   return (
     <div className={className}>
@@ -10,7 +19,7 @@ function AnimatedText({text, className}) {
           animate={{ opacity: 1 }}
           transition={{
             duration: 0.25,
-            delay: i / 10
+            delay: i/delay
           }}
           key={i}
         >

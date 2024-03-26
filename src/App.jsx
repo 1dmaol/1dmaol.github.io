@@ -5,19 +5,23 @@ import { Projects } from './components/Projects'
 import { About } from './components/About'
 import { Contact } from './components/Contact'
 import { useEffect, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 
 function App() {
 
     const [nightMode, setNightMode] = useState(true)
 
+    const { i18n, t } = useTranslation()
 
     useEffect(() => {
+        document.title = t('title');
+
         if (nightMode) {
             document.body.classList.add('dark');
         } else {
             document.body.classList.remove('dark');
         }
-    }, [nightMode]);
+    }, [nightMode, i18n.language]);
 
     return (
         <>

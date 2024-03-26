@@ -1,7 +1,10 @@
 import { useEffect, useState } from "react"
 import { currentAboutHeight, currentProjectsHeight } from "../consts/sizes"
+import { useTranslation } from "react-i18next"
 
-export const Header = ({nightMode}) => {
+export const Header = () => {
+
+    const { t } = useTranslation()
 
     return (
         <header className="flex justify-between items-center absolute md:left-20 md:right-20">
@@ -13,8 +16,8 @@ export const Header = ({nightMode}) => {
             </a>
 
             <nav className="flex flex-row gap-x-20 hidden md:flex">
-                <a className="text-xl hover:scale-110 transition cursor-pointer" onClick={() => window.scrollTo({ top: currentProjectsHeight, behavior: 'smooth' })}>Proyectos</a>
-                <a className="text-xl hover:scale-110 transition cursor-pointer" onClick={() => window.scrollTo({ top: currentAboutHeight, behavior: 'smooth' })}>Sobre mí</a>
+                <a className="text-xl hover:scale-110 transition cursor-pointer" onClick={() => window.scrollTo({ top: currentProjectsHeight, behavior: 'smooth' })}>{t('projects')}</a>
+                <a className="text-xl hover:scale-110 transition cursor-pointer" onClick={() => window.scrollTo({ top: currentAboutHeight, behavior: 'smooth' })}>{t('about')}</a>
             </nav>
 
         </header>
