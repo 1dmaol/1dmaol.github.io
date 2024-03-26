@@ -3,7 +3,7 @@ import { GitHub } from "./GitHub";
 import { Tag } from "./Tag";
 import { motion } from "framer-motion"
 import { LinkedIn } from "./LinkedIn";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 export const Project = ({ title, image=null, body, github=null, stack, onClick, href=null, website=null, awards=null, achievements=null }) => {
@@ -14,8 +14,13 @@ export const Project = ({ title, image=null, body, github=null, stack, onClick, 
     const [fadeIn, setFadeIn] = useState(true)
     const [animProgress, setAnimProgress] = useState(0)
     const ANIM_DURATION = 5000
+    const [startTime, setStartTime] = useState(0)
 
     useEffect(() => {
+        if (achievements.length <= 1) return
+
+        setStartTime(Date.now())
+
         setTimeout(() => {
             setFadeIn(true)
         }, ANIM_DURATION/20)
@@ -32,21 +37,15 @@ export const Project = ({ title, image=null, body, github=null, stack, onClick, 
             setFadeIn(false)
         }, ANIM_DURATION-ANIM_DURATION/20)
     }, [position])
-/*
+
     useEffect(() => {
-        console.log(animProgress)
-        if(animProgress > ANIM_DURATION) {
+        if(animProgress > 100) {
             setAnimProgress(0)
         }
-        //Implementing the setInterval method
-        let interval = setInterval(() => setAnimProgress(animProgress + 15), 10);
-
-        //Clearing the interval
+        let interval = setInterval(() => setAnimProgress(((new Date() - startTime)*2/100).toFixed(2)), 10);
         return () => clearInterval(interval);
     }, [animProgress])
-                {achievements && achievements.length > 1 && <progress id="nextAchievement" value={animProgress} max={ANIM_DURATION}/>}
 
-    */
     return (
         <motion.div
             animate={{ opacity: 1 }} initial={{ opacity: 0 }}
@@ -67,6 +66,11 @@ export const Project = ({ title, image=null, body, github=null, stack, onClick, 
                             {achievements[position].title}
                         </motion.p>
                     }
+
+                    {achievements && achievements.length > 1 && 
+                        <div className="w-full bg-gray-100 rounded-full h-2.5 dark:bg-gray-700">
+                            <div className="bg-blue-400 h-2.5 rounded-full" style={{width: animProgress + "%"}}/>
+                        </div>}
 
                     {github && <GitHub type="forks" size="large" namespace={github.namespace} repo={github.repo} />}
 
@@ -107,7 +111,7 @@ export const Project = ({ title, image=null, body, github=null, stack, onClick, 
                 {t("project_back")}
             </div>
             {/*<IoArrowBackOutline className="text-2xl hover:cursor-pointer hover:scale-110 transition" onClick={onClick} />*/}
-
+            
         </motion.div>
     )
 }
