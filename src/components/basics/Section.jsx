@@ -5,7 +5,7 @@ export const Section = ({ onMouseOver, onClick, section, selected }) => {
     const isMobile = window.innerWidth < 768
 
     return (
-        <div onMouseOver={onMouseOver} onClick={onClick} className={"flex flex-col min-w-[300px] gap-4 text-slate-400 hover:text-black transition cursor-default tooltip"}>
+        <div onMouseOver={onMouseOver} onClick={onClick} className={"flex flex-col min-w-[300px] gap-4 text-slate-400 hover:text-black dark:hover:text-white transition cursor-default tooltip"}>
             
                 <div className={" w-10 h-10 self-center flex items-center justify-center " + (selected?"border-black dark:border-white scale-125 ":"border-slate-400")}>
                     <p className={"text-center transparent font-bold text-3xl"+ (selected ? " text-black dark:text-white" : "")}>{section.position}</p>
