@@ -14,14 +14,17 @@ function App() {
     const { i18n, t } = useTranslation()
 
     useEffect(() => {
-        document.title = t('title');
-
         if (nightMode) {
             document.body.classList.add('dark');
         } else {
             document.body.classList.remove('dark');
         }
-    }, [nightMode, i18n.language]);
+    }, [nightMode]);
+
+    useEffect(() => {
+        const params = window.location.href.split('?')[1].split('&').map(param => param.split('=')).reduce((acc, [key, value]) => ({ ...acc, [key]: value }), {})
+        params['locale'] && i18n.changeLanguage(params['locale'])
+    }, [])
 
     return (
         <>

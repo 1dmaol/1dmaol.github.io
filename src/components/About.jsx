@@ -20,6 +20,7 @@ export const About = () => {
         {
             index: 1,
             title: "Indra Studios ("+ t('london') +")",
+            position: "5️⃣",
             role: t("subtitle"),
             year: "2018 - 2019",
             achievements: [{
@@ -32,6 +33,7 @@ export const About = () => {
         {
             index: 2,
             title: t('side_project_role'),
+            position: "4️⃣",
             role: t("subtitle"),
             year: "2019 - 2022",
             achievements: [{
@@ -44,6 +46,7 @@ export const About = () => {
         {
             index: 3,
             title: "IIM - Universistat Politecnica de València",
+            position: "3️⃣",
             role: t("researcher_role") + " - " + t("subtitle"),
             year: "2021 - 2022",
             achievements: [{
@@ -59,6 +62,7 @@ export const About = () => {
         },
         {
             index: 4,
+            position: "2️⃣",
             title: "Panel Sistemas Informáticos",
             role: t("backend_role"),
             year: "2022 - " + t("currently"),
@@ -67,6 +71,7 @@ export const About = () => {
         {
             index: 5,
             title: "Freelancer",
+            position: "1️⃣",
             role: t("subtitle"),
             year: "2023 - " + t("currently"),
             achievements: [{
