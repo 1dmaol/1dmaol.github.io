@@ -22,8 +22,8 @@ function App() {
     }, [nightMode]);
 
     useEffect(() => {
-        const params = window.location.href.split('?')[1].split('&').map(param => param.split('=')).reduce((acc, [key, value]) => ({ ...acc, [key]: value }), {})
-        params['locale'] && i18n.changeLanguage(params['locale'])
+        const params = window.location.href.split('?')[1]?.split('&').map(param => param.split('=')).reduce((acc, [key, value]) => ({ ...acc, [key]: value }), {})
+        params && params['locale'] && i18n.changeLanguage(params['locale'])
     }, [])
 
     return (
