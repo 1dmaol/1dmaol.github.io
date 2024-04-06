@@ -21,7 +21,6 @@ export const Projects = () => {
                     image: new URL('../assets/EnsoIphoneMac.png', import.meta.url).href
                 }
             ],
-            website: "https://enso-prototype.onrender.com/",
             image: new URL('../assets/EnsoIphoneMac.png', import.meta.url).href,
             //github: { namespace: "1dmaol", repo: "Enso" },
             stack: [
@@ -46,6 +45,14 @@ export const Projects = () => {
                 },
                 {
                     title: t("project_viking_hint3"),
+                    image: new URL('../assets/VikingCentroIphone15.png', import.meta.url).href
+                },
+                {
+                    title: "Pagos dentro de la aplicación y generación automática de facturas",
+                    image: new URL('../assets/VikingCentroIphone15.png', import.meta.url).href
+                },
+                {
+                    title: "Gestión de notificaciones de eventos en la aplicación",
                     image: new URL('../assets/VikingCentroIphone15.png', import.meta.url).href
                 },
             ],
