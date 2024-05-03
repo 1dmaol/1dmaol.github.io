@@ -12,9 +12,11 @@ export const Card = ({ title, image = null, body, stack, redirect=false, onClick
                 animate={{ opacity: 1 }} initial={{ opacity: 0 }}
                 className={"item flex gap-4 flex-col w-full md:w-[320px] hover:scale-105 transition bg-white dark:bg-slate-800 p-4 rounded-lg items-center cursor-pointer gap-2 shadow h-[435px] " + (redirect ? "justify-around" : "justify-between")}
         >
+
+
             <div className="flex flex-col gap-2">
                 {loading && image && <div className="image-placeholder placeholder"/>}
-                {image && <img src={image} id="image" onLoad={() => setLoading(false)} alt="logo" className={`aspect-[16/10] md:w-[300px] rounded-lg object-cover ` + (loading ? "hidden" : "flex")} />}
+                {image && <img src={image} id="image" onLoad={() => setLoading(false)} alt="logo" className={`aspect-[16/11] md:w-[300px] rounded-lg object-fill ` + (loading ? "hidden" : "flex")} />}
                 <a>
                     <h2 className="text-lg font-bold py-2">
                         {title}
