@@ -70,7 +70,7 @@ export const About = () => {
         },
         {
             index: 5,
-            title: "Freelancer",
+            title: t("independent_role"),
             position: "1️⃣",
             role: t("subtitle"),
             year: "2023 - " + t("currently"),
