@@ -15,11 +15,11 @@ export const About = () => {
         t("about_quote4"),
         t("about_quote5"),
     ]
-    
+
     const sections = [
         {
             index: 1,
-            title: "Indra Studios ("+ t('london') +")",
+            title: "Indra Studios (" + t('london') + ")",
             position: "5️⃣",
             role: t("subtitle"),
             year: "2018 - 2019",
@@ -65,7 +65,7 @@ export const About = () => {
             position: "2️⃣",
             title: "Panel Sistemas Informáticos",
             role: t("backend_role"),
-            year: "2022 - " + t("currently"),
+            year: "2022 - 2024",
             quote: quotes[3]
         },
         {
@@ -83,6 +83,14 @@ export const About = () => {
                 url: "https://vikingcentro.com/",
                 type: "🧑🏻‍💻"
             }],
+            quote: quotes[4]
+        },
+        {
+            index: 6,
+            title: "Entornos de Formación (EdF)",
+            position: "1️⃣",
+            role: t("subtitle"),
+            year: "2024 - " + t("currently"),
             quote: quotes[4]
         }
     ]
@@ -102,6 +110,19 @@ export const About = () => {
     const [currentTimeout, setCurrentTimeout] = useState(null);
 
     const ANIM_DURATION = .3;
+
+    function customDivision(numerator, denominator) {
+        let result = numerator / denominator;
+
+        if (result > 1) {
+            // Si el resultado es mayor que 1, restamos el exceso
+            result = 2 - result;
+        }
+
+        result = result.toFixed(1);
+        result = result <= 0 ? 0.2 : result;
+        return result; // Redondear a 1 decimal
+    }
 
     useEffect(() => {
         if (selected && quote !== "" && selected.quote !== quote) {
@@ -129,7 +150,7 @@ export const About = () => {
         setCurrentTimeout(setTimeout(() => {
             setCurrentIndex((currentIndex + 1) % sections.length);
             setSelected(sections[currentIndex])
-            if(currentIndex === 0) {
+            if (currentIndex === 0) {
                 document.getElementById("journey").scrollTo({
                     left: 0,
                     behavior: 'smooth'
@@ -170,10 +191,11 @@ export const About = () => {
 
                 <div
                     id="journey"
-                    className="flex flex-col md:flex-row rounded-lg gap-4 md:h-[210px] overflow-x-hidden md:overflow-x-auto md:w-[1250px] overflow-y-auto md:overflow-y-hidden no-scrollbar">
+                    className="flex flex-col md:flex-row rounded-lg gap-12 md:h-[300px] items-center overflow-x-hidden md:overflow-x-auto md:w-dvw md:px-24 px-0 overflow-y-auto md:overflow-y-hidden no-scrollbar">
                     {
                         sections.sort((a, b) => isMobile ? b.index - a.index : a.index - b.index).map((section, index) => {
                             return <Section
+                                className={"transition-all duration-300 " + (selected.index === section.index ? "md:scale-110" : "md:scale-90")}
                                 onMouseOver={() => {
                                     setAutoReplay(false)
                                     clearTimeout(currentTimeout);
@@ -190,8 +212,17 @@ export const About = () => {
                                         })
                                     }
                                 }}
-                                key={index} section={section} 
+                                style={{ opacity: customDivision(selected.index, section.index) }}
+                                key={index} section={section}
                                 selected={selected.index === section.index} />
+                        })
+                    }
+                </div>
+
+                <div className="flex flex-row items-center justify-center h-[50px] w-[600px] gap-2 md:block hidden">
+                {
+                        sections.map((section, index) => {
+                            return <div className={"h-[10px] w-[10px] bg-[#555555] rounded-full transition duration-300 " + (section.index === selected.index ? "scale-105" : "scale-75")} key={index}/>
                         })
                     }
                 </div>
