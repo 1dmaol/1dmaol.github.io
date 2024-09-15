@@ -219,7 +219,7 @@ export const About = () => {
                     }
                 </div>
 
-                <div className="flex flex-row items-center justify-center h-[50px] w-[600px] gap-2 md:block hidden">
+                <div className="flex flex-row items-center justify-center h-[50px] w-[600px] gap-2 md:flex hidden">
                 {
                         sections.map((section, index) => {
                             return <div className={"h-[10px] w-[10px] bg-[#555555] rounded-full transition duration-300 " + (section.index === selected.index ? "scale-105" : "scale-75")} key={index}/>
