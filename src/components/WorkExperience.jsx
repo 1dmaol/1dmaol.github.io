@@ -73,7 +73,7 @@ export const WorkExperience = () => {
             title: t("independent_role"),
             position: "1️⃣",
             role: t("subtitle"),
-            year: "2023 - " + t("currently"),
+            year: "2023",
             achievements: [{
                 name: t("project_enso_title"),
                 url: "https://enso-prototype.onrender.com/",
@@ -90,7 +90,7 @@ export const WorkExperience = () => {
             title: "Entornos de Formación (EdF)",
             position: "1️⃣",
             role: t("subtitle"),
-            year: "2024 - " + t("currently"),
+            year: "2024",
             quote: quotes[4]
         }
     ]
