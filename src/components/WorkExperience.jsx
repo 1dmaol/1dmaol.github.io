@@ -156,7 +156,7 @@ export const WorkExperience = () => {
                         return (
                             <li className={"py-4 px-6 w-fit md:w-[750px] md:mx-auto"} key={section.index}>
                                 <div className="w-4 h-4 relative -ml-8 md:-ml-16 bg-gray-800 rounded-full dark:bg-gray-400" />
-                                <div className={"px-4 md:px-10 py-4 md:py-6 bg-gray-200 -mt-6 rounded-lg dark:bg-gray-700 transition-all duration-300 " + (isSelected ? " md:scale-105" : "")}>
+                                <div className={"px-4 md:px-10 py-4 md:mr-0 mr-[-24px] md:py-6 bg-gray-200 -mt-6 rounded-lg dark:bg-slate-800 transition-all duration-300 " + (isSelected ? " md:scale-105" : "")}>
                                     <div className="mb-2 flex text-xs md:text-sm flex-row justify-between">
                                         <p class="opacity-75">{section.year}</p>
                                         <p class="opacity-75 font-[500]">{section.title}</p>
