@@ -66,7 +66,7 @@ i18n
                     backend_role: 'Desarrollador Backend',
                     project_developer_role: "Desarrollador de Proyectos",
                     side_project_role: "Desarrollador de Proyectos",
-                    independent_role: "Independiente",
+                    independent_role: "Freelancer",
                     currently: 'Actualmente',
                     en: 'Inglés',
                     es: 'Español',

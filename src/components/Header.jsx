@@ -7,7 +7,7 @@ export const Header = () => {
     const { t } = useTranslation()
 
     return (
-        <header className="flex justify-between items-center absolute md:left-20 md:right-20 px-8">
+        <header className="flex justify-between items-center md:absolute md:left-20 md:right-20 md:px-8">
             <a href="https://1dmaol.github.io/">
                 <img
                     className="rounded-full w-20 h-22 hover:scale-110 transition"
