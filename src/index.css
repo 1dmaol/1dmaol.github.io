@@ -7,6 +7,10 @@ body {
     @apply transition-colors duration-500;
 }
 
+:root {
+  color-scheme: light dark;
+}
+
 @layer utilities {
     /* Chrome, Safari and Opera */
     .no-scrollbar::-webkit-scrollbar {

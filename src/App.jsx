@@ -6,6 +6,7 @@ import { About } from './components/About'
 import { Contact } from './components/Contact'
 import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import { WorkExperience } from './components/WorkExperience'
 
 function App() {
 
@@ -31,11 +32,11 @@ function App() {
             <Header nightMode={nightMode} />
             <Who />
             <Projects />
-            <About />
+            <WorkExperience />
 
             <div className="hover:cursor-pointer"
                 onClick={() => { setNightMode(!nightMode) }}>
-                <div className={"w-0 h-0 top-0 right-0 absolute rotate-90 border-t-[0px] border-t-transparent border-b-[100px] border-b-transparent border-l-[100px]" + (nightMode ? " border-l-gray-600" : " border-l-yellow-100")} />
+                <div className={"w-0 h-0 top-0 right-0 absolute rotate-90 border-t-[0px] border-t-transparent border-b-[100px] border-b-transparent border-l-[100px]" + (nightMode ? " border-l-gray-600": " border-l-yellow-100")} />
                 {
                     nightMode ?
                         <div className="absolute top-4 right-4 text-2xl hover:scale-110 transition">

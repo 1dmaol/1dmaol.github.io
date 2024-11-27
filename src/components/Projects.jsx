@@ -135,7 +135,7 @@ export const Projects = () => {
     }, [page])
 
     return (
-        <FadeInSection id="projects">
+        <section id="projects" className="w-full md:h-dvh h-full">
             {
                 selected ?
                     <>
@@ -205,6 +205,6 @@ export const Projects = () => {
 
                     </div>
             }
-        </FadeInSection>
+        </section>
     )
 }
