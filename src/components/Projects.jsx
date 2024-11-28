@@ -176,7 +176,7 @@ export const Projects = () => {
                                 :
                                 <div className="flex flex-row gap-8 justify-center items-center">
                                     {page !== 0 &&
-                                        <div onClick={() => { setPage(page - 1) }} className="bg-white dark:bg-slate-800 absolute left-14 rounded-full p-2 hover:scale-125 transition cursor-pointer shadow">
+                                        <div onClick={() => { setPage(page - 1) }} className="bg-white dark:bg-slate-800 absolute left-14 rounded-full p-2 hover:scale-125 transition cursor-pointer shadow-lg">
                                             <IoIosArrowBack />
                                         </div>}
                                     <div className="flex flex-row justify-center gap-16 w-[1200px] items-center flex-wrap align-baseline">
@@ -197,7 +197,7 @@ export const Projects = () => {
                                         )}
                                     </div>
                                     {!isLastPage &&
-                                        <div onClick={() => { setPage(page + 1) }} className="bg-white dark:bg-slate-800 md:absolute md:right-14 rounded-full p-2 hover:scale-125 transition cursor-pointer shadow">
+                                        <div onClick={() => { setPage(page + 1) }} className="bg-white dark:bg-slate-800 md:absolute md:right-14 rounded-full p-2 hover:scale-125 transition cursor-pointer shadow-lg">
                                             <IoIosArrowForward />
                                         </div>}
                                 </div>

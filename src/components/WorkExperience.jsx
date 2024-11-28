@@ -3,6 +3,7 @@ import FadeInSection from "./basics/FadeInSection"
 import { Section } from "./basics/Section"
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import { DiAndroid, DiAngularSimple, DiApple, DiAws, DiCode, DiDatabase, DiDocker, DiGit, DiGithubBadge, DiJava, DiMysql, DiOnedrive, DiPostgresql, DiPython, DiReact, DiUnitySmall } from "react-icons/di";
 
 
 export const WorkExperience = () => {
@@ -23,6 +24,12 @@ export const WorkExperience = () => {
             url: "https://indrastudios.com/",
             position: "5️⃣",
             role: t("subtitle"),
+            description: t("we_description1"),
+            stack: [
+                { icon: DiJava, name: "Java" },
+                { icon: DiReact, name: "React" },
+                { icon: DiPostgresql, name: "PostgreSQL" }
+            ],
             year: "2018 - 2019",
             achievements: [{
                 name: t("app_developer_degree"),
@@ -35,6 +42,17 @@ export const WorkExperience = () => {
             index: 2,
             title: t('side_project_role'),
             position: "4️⃣",
+            description: t("we_description2"),
+            stack: [
+                { icon: DiAndroid, name: "Android" },
+                { icon: DiPython, name: "Python" },
+                { icon: DiGithubBadge, name: "Github" },
+                { icon: DiJava, name: "Java" },
+                { icon: DiReact, name: "React" },
+                { icon: DiUnitySmall, name: "Unity" },
+                { icon: DiDatabase, name: "Database" },
+                { icon: DiCode, name: "Code" }
+            ],
             role: t("subtitle"),
             year: "2019 - 2022",
             achievements: [{
@@ -47,6 +65,13 @@ export const WorkExperience = () => {
         {
             index: 3,
             title: "IIM (UPV)",
+            description: t('we_description3'),
+            stack: [
+                { icon: DiJava, name: "Java" },
+                { icon: DiReact, name: "React" },
+                { icon: DiUnitySmall, name: "Unity" },
+                { icon: DiPostgresql, name: "PostgreSQL" }
+            ],
             url: "https://iim.webs.upv.es/",
             position: "3️⃣",
             role: t("researcher_role") + " - " + t("subtitle"),
@@ -66,6 +91,15 @@ export const WorkExperience = () => {
             index: 4,
             position: "2️⃣",
             title: "Panel Sistemas",
+            description: t('we_description4'),
+            stack: [
+                { icon: DiJava, name: "Java" },
+                { icon: DiPostgresql, name: "PostgreSQL" },
+                { icon: DiOnedrive, name: "Cloud" },
+                { icon: DiDocker, name: "Docker" },
+                { icon: DiAws, name: "AWS" },
+                { icon: DiGit, name: "Git" }
+            ],
             url: "https://www.panel.es/",
             role: t("backend_role"),
             year: "2022 - 2024",
@@ -76,6 +110,16 @@ export const WorkExperience = () => {
             title: t("independent_role"),
             position: "1️⃣",
             role: t("subtitle"),
+            description: t('we_description5'),
+            stack: [
+                { icon: DiAndroid, name: "Android" },
+                { icon: DiApple, name: "Apple" },
+                { icon: DiGithubBadge, name: "Github" },
+                { icon: DiJava, name: "Java" },
+                { icon: DiReact, name: "React" },
+                { icon: DiPostgresql, name: "PostgreSQL" },
+                { icon: DiCode, name: "Code" }
+            ],
             year: "2023",
             achievements: [{
                 name: t("project_enso_title"),
@@ -94,6 +138,15 @@ export const WorkExperience = () => {
             url: "https://www.edf.global/",
             position: "1️⃣",
             role: t("subtitle"),
+            description: t('we_description6'),
+            stack: [
+                { icon: DiGit, name: "Git" },
+                { icon: DiJava, name: "Java" },
+                { icon: DiAngularSimple, name: "Angular" },
+                { icon: DiAws, name: "AWS" },
+                { icon: DiMysql, name: "MySQL" },
+                { icon: DiCode, name: "Code" }
+            ],
             year: "2024",
             quote: quotes[4]
         }
@@ -160,22 +213,33 @@ export const WorkExperience = () => {
                         return (
                             <li className={"py-4 px-6 w-fit md:w-[750px] md:mx-auto"} key={section.index}>
                                 <div className="w-4 h-4 relative -ml-8 md:-ml-16 bg-gray-800 rounded-full dark:bg-gray-400" />
-                                <div className={"px-4 md:px-10 py-4 md:mr-0 mr-[-24px] md:py-6 bg-gray-200 -mt-6 rounded-lg dark:bg-slate-800 transition-all duration-300 " + (isSelected ? " md:scale-105" : "")}>
+                                <div className={"px-4 md:px-10 py-4 md:mr-0 mr-[-24px] shadow-lg md:py-6 bg-gray-200 -mt-6 rounded-lg dark:bg-slate-800 transition-all duration-300 " + (isSelected ? " md:scale-105" : "")}>
                                     <div className="mb-2 flex text-xs md:text-sm flex-row justify-between">
-                                        <p class="opacity-75 min-w-[75px] text-start">{section.year}</p>
-                                        {!section.url ? <p class="opacity-75 font-[500]">{section.title}</p> :
-                                        <a href={section.url} target="#blank" class="opacity-75 font-[500] underline text-end">{section.title}</a>}
+                                        <p className="opacity-75 min-w-[75px] text-start">{section.year}</p>
+                                        {!section.url ? <p className="opacity-75 font-[400]">{section.title}</p> :
+                                            <a href={section.url} target="#blank" className="opacity-75 font-bold text-end hover:scale-105 transition">{section.title}</a>}
                                     </div>
-                                    <h1 class="font-bold text-2xl text-start">{section.role}</h1>
+                                    <h1 className="font-bold text-2xl text-start">{section.role}</h1>
 
                                     {section.achievements &&
                                         <div className="flex flex-col md:flex-row text-white py-2 gap-2 md:gap-4 items-center">
                                             {section.achievements.map((achievement, index) => {
                                                 return <a className="hover:scale-105 transition text-xs md:text-sm bg-slate-600 p-2 rounded-lg" href={achievement.url} target="_blank" key={index}>{achievement.type} {achievement.name}</a>
                                             })}
-                                        </div>}
-                                    <p class="text-start opacity-75 mt-2 text-[14px]">{
-                                        isSelected ? section.quote : section.quote}</p>
+                                        </div>
+                                    }
+                                    <div className="flex flex-col md:flex-row gap-4">
+                                        <div className="flex flex-col w-full">
+                                            <p className="text-start opacity-75 mt-2 text-[14px]">{section.description}</p>
+                                        </div>
+                                        <div className="flex flex-row flex-wrap w-40 md:self-end self-center">
+                                            {section.stack?.map((stack, index) => {
+                                                return <div className="w-10 h-10 flex items-center justify-center" title={stack.name} key={index}>
+                                                    <stack.icon size={26} />
+                                                </div>
+                                            })}
+                                        </div>
+                                    </div>
                                 </div>
                             </li>
                         )

@@ -10,7 +10,7 @@ export const Card = ({ title, image = null, body, stack, redirect=false, onClick
     return (
         <motion.div onClick={onClick}
                 animate={{ opacity: 1 }} initial={{ opacity: 0 }}
-                className={"item flex gap-4 flex-col w-full md:w-[320px] hover:scale-105 transition bg-white dark:bg-slate-800 p-4 rounded-lg items-center cursor-pointer gap-2 shadow h-[500px] " + (redirect ? "justify-around" : "justify-between")}
+                className={"item flex gap-4 flex-col w-full md:w-[320px] hover:scale-105 transition bg-white dark:bg-slate-800 p-4 rounded-lg items-center cursor-pointer gap-2 shadow-lg h-[500px] " + (redirect ? "justify-around" : "justify-between")}
         >
 
 
