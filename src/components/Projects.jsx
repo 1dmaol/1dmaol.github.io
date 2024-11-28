@@ -9,11 +9,13 @@ import { useTranslation } from "react-i18next";
 
 export const Projects = () => {
     const { t } = useTranslation()
+    const isMobile = window.innerWidth < 768
 
     const projects = [
         {
             title: "Enso",
             body: t("project_enso_body"),
+            order:2,
             href: "https://github.com/marcocaballero/portfolio",
             achievements: [
                 {
@@ -34,6 +36,8 @@ export const Projects = () => {
         {
             title: "Viking Centro",
             body: t("project_viking_body"),
+            order:1,
+            fav: true,
             awards: [
                 {
                     title: "🏋🏼 " + t("real_case") + " (Viking Centro)",
@@ -72,11 +76,15 @@ export const Projects = () => {
                 "Typescript",
                 "IOS",
                 "Android",
-                "Docker"
+                "Docker",
+                "Firebase FCM",
+                "Stripe",
+                "DevOps"
             ]
         },
         {
             title: "iDrill",
+            order:3,
             body: t("project_idrill_body"),
             href: "https://github.com/marcocaballero/portfolio",
             achievements: [
@@ -115,14 +123,13 @@ export const Projects = () => {
         {
             title: t("project_see_more_title"),
             body: t("project_see_more_body"),
+            order:4,
             href: "https://www.linkedin.com/in/marc-oller/details/projects/",
             redirect: true,
             stack: [
             ]
         }
     ];
-
-    const isMobile = window.innerWidth < 768
 
     const [selected, setSelected] = useState(null)
 
@@ -135,7 +142,7 @@ export const Projects = () => {
     }, [page])
 
     return (
-        <section id="projects" className="w-full md:h-dvh h-full">
+        <section id="projects" className="w-full md:h-dvh h-full md:pb-10">
             {
                 selected ?
                     <>
@@ -147,7 +154,7 @@ export const Projects = () => {
                         {
                             isMobile ?
                                 <div className="flex flex-col justify-center gap-8 w-full items-center flex-wrap align-baseline">
-                                    {projects.slice((page * MAX_ELEMENTS), (page * MAX_ELEMENTS) + MAX_ELEMENTS).map((project) =>
+                                    {projects.sort((a, b) => a.order - b.order).slice((page * MAX_ELEMENTS), (page * MAX_ELEMENTS) + MAX_ELEMENTS).map((project) =>
                                         <Card key={project.title} {...project} selected={selected}
                                             onClick={() => {
                                                 window.scrollTo({ top: currentProjectsHeight, behavior: 'smooth' });

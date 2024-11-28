@@ -3,7 +3,7 @@ import { LinkedIn } from "./LinkedIn";
 import { Tag } from "./Tag";
 import { motion } from "framer-motion";
 
-export const Card = ({ title, image = null, body, stack, redirect=false, onClick }) => {
+export const Card = ({ title, image = null, body, stack, redirect=false, onClick, ...props }) => {
 
     const [loading, setLoading] = useState(true)
 
@@ -26,6 +26,8 @@ export const Card = ({ title, image = null, body, stack, redirect=false, onClick
                     </p>
                 </a>
             </div>
+            
+            {props.fav && <div className="absolute -mt-8 -mr-[350px] md:-mr-[300px] z-99 p-2 bg-red-500 rounded-full text-white">🤍</div>}
 
             {redirect && <LinkedIn />}
 

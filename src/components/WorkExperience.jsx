@@ -191,7 +191,7 @@ export const WorkExperience = () => {
     return (
         <section
             id="about"
-            className="w-full h-dvh md:h-full"
+            className="w-full h-dvh md:h-full -mb-10"
             isVisible={isVisible}
             setVisible={setVisible}
         >
@@ -228,7 +228,7 @@ export const WorkExperience = () => {
                                             })}
                                         </div>
                                     }
-                                    <div className="flex flex-col md:flex-row gap-4">
+                                    <div className="flex flex-col md:flex-row gap-8">
                                         <div className="flex flex-col w-full">
                                             <p className="text-start opacity-75 mt-2 text-[14px]">{section.description}</p>
                                         </div>
@@ -244,6 +244,11 @@ export const WorkExperience = () => {
                             </li>
                         )
                     })}
+                    <li className="py-4 px-6 w-fit md:w-[750px] md:mx-auto pb-14">
+                        <span className="text-start opacity-75 mt-2 text-[14px]">
+                            {t('regards_title')}<br/><br/>{t('regards_subtitle')}
+                        </span>
+                    </li>
                 </ul>
             </div>
         </section>

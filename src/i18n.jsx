@@ -62,6 +62,8 @@ i18n
                     it_degree: "Interactive Technology Degree",
                     app_developer_degree: "Application Developer Degree",
                     london: "London",
+                    regards_title: "Thanks for visiting my portfolio!",
+                    regards_subtitle: "This website is developed by me, and you can see all the commits that I have made in my GitHub repository."
                 }
             },
             es: {
@@ -116,6 +118,8 @@ i18n
                     it_degree: "Grado de Tecnologías Interactivas",
                     app_developer_degree: "Grado de Desarrollo de Apps",
                     london: "Londres",
+                    regards_title: "¡Muchas gracias por visitar mi portfolio!",
+                    regards_subtitle: "Toda esta web esta desarrollada por mi, y podrás ver todos los commits que he realizado en mi repositorio de GitHub."
                 }
             },
             vl: {
@@ -170,6 +174,8 @@ i18n
                     it_degree: "Grau de Tecnologies Interàctives",
                     app_developer_degree: "Grau de Desenvolupament d'Apps",
                     london: "Londres",
+                    regards_title: "Gracies per visitar mi portafoli!",
+                    regards_subtitle: "Toda aquesta web s'ha desenvolupat per mi, i pots veure tots els commits que he realitzat al meu repositori de GitHub.",
                 }
             },
         }
