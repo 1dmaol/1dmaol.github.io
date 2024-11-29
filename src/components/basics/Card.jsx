@@ -27,7 +27,7 @@ export const Card = ({ title, image = null, body, stack, redirect=false, onClick
                 </a>
             </div>
             
-            {props.fav && <div className="absolute -mt-8 -mr-[350px] md:-mr-[300px] z-99 p-2 bg-red-500 rounded-full text-white">🤍</div>}
+            {props.fav && <div className="relative -right-[155px] -top-[365px] z-99 p-2 bg-red-500 rounded-full text-white">🤍</div>}
 
             {redirect && <LinkedIn />}
 
