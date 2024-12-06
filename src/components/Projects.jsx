@@ -19,7 +19,13 @@ export const Projects = () => {
             href: "https://github.com/marcocaballero/portfolio",
             achievements: [
                 {
-                    title: t("project_enso_hint1"),
+                    title: t("project_enso_title1"),
+                    content: t("project_enso_hint1"),
+                    image: new URL('../assets/EnsoIphoneMac.png', import.meta.url).href
+                },
+                {
+                    title: t("project_enso_title2"),
+                    content: t("project_enso_hint2"),
                     image: new URL('../assets/EnsoIphoneMac.png', import.meta.url).href
                 }
             ],
@@ -34,37 +40,41 @@ export const Projects = () => {
             ]
         },
         {
-            title: "Viking Centro",
-            body: t("project_viking_body"),
+            title: "Talos",
+            body: t("project_talos_body"),
             order:1,
             fav: true,
             awards: [
                 {
                     title: "🏋🏼 " + t("real_case") + " (Viking Centro)",
-                    url: "https://vikingcentro.com/"
+                    url: "https://vikingcentro.com/",
+                    record: {
+                        title: t("users"),
+                        amount: "+500"
+                    }
                 }
             ],
             achievements: [
                 {
-                    title: t("project_viking_hint1"),
+                    title: t("project_talos_title1"),
+                    content: t("project_talos_hint1"),
                     image: new URL('../assets/VikingCentroIphone15.png', import.meta.url).href
                 },
                 {
-                    title: t("project_viking_hint2"),
+                    title: t("project_talos_title2"),
+                    content: t("project_talos_hint2"),
                     image: new URL('../assets/VikingCentroIphone15.png', import.meta.url).href
                 },
                 {
-                    title: t("project_viking_hint3"),
+                    title: t("project_talos_title3"),
+                    content: t("project_talos_hint3"),
                     image: new URL('../assets/VikingCentroIphone15.png', import.meta.url).href
                 },
                 {
-                    title: "Pagos dentro de la aplicación y generación automática de facturas",
+                    title: t("project_talos_title4"),
+                    content: t("project_talos_hint4"),
                     image: new URL('../assets/VikingCentroIphone15.png', import.meta.url).href
-                },
-                {
-                    title: "Gestión de notificaciones de eventos en la aplicación",
-                    image: new URL('../assets/VikingCentroIphone15.png', import.meta.url).href
-                },
+                }
             ],
             href: "https://github.com/marcocaballero/portfolio",
             image: new URL('../assets/VikingCentroIphone15.png', import.meta.url).href,
@@ -89,15 +99,23 @@ export const Projects = () => {
             href: "https://github.com/marcocaballero/portfolio",
             achievements: [
                 {
-                    title: t("project_idrill_hint2"),
+                    title: t("project_idrill_title1"),
+                    content: t("project_idrill_hint1"),
                     image: new URL('../assets/idrillonPhone.png', import.meta.url).href
                 },
                 {
-                    title: t("project_idrill_hint3"),
+                    title: t("project_idrill_title2"),
+                    content: t("project_idrill_hint2"),
+                    image: new URL('../assets/idrillonPhone.png', import.meta.url).href
+                },
+                {
+                    title: t("project_idrill_title3"),
+                    content: t("project_idrill_hint3"),
                     image: new URL('../assets/idrilltest_1.jpeg', import.meta.url).href
                 },
                 {
-                    title: t("project_idrill_hint4"),
+                    title: t("project_idrill_title4"),
+                    content: t("project_idrill_hint4"),
                     image: new URL('../assets/idrilltest_2.jpeg', import.meta.url).href
                 }
             ],

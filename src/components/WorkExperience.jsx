@@ -4,6 +4,7 @@ import { Section } from "./basics/Section"
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { DiAndroid, DiAngularSimple, DiApple, DiAws, DiCode, DiDatabase, DiDocker, DiGit, DiGithubBadge, DiJava, DiMysql, DiOnedrive, DiPostgresql, DiPython, DiReact, DiUnitySmall } from "react-icons/di";
+import { GitHub } from "./basics/GitHub";
 
 
 export const WorkExperience = () => {
@@ -126,7 +127,7 @@ export const WorkExperience = () => {
                 url: "https://enso-prototype.onrender.com/",
                 type: "🧑🏻‍💻"
             }, {
-                name: t("project_viking_title"),
+                name: t("project_talos_title"),
                 url: "https://vikingcentro.com/",
                 type: "🧑🏻‍💻"
             }],
@@ -244,10 +245,11 @@ export const WorkExperience = () => {
                             </li>
                         )
                     })}
-                    <li className="py-4 px-6 w-fit md:w-[750px] md:mx-auto pb-14">
+                    <li className="py-4 px-6 w-fit md:w-[750px] md:mx-auto pb-14 flex flex-col items-center justify-center">
                         <span className="text-start opacity-75 mt-2 text-[14px]">
                             {t('regards_title')}<br/><br/>{t('regards_subtitle')}
                         </span>
+                        <GitHub namespace={"1dmaol"} />
                     </li>
                 </ul>
             </div>
