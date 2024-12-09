@@ -34,7 +34,7 @@ export const About = () => {
             index: 2,
             title: t('side_project_role'),
             position: "4️⃣",
-            role: t("subtitle"),
+            role: t("fullstack_role"),
             year: "2019 - 2022",
             achievements: [{
                 name: t("project_developer_role"),
@@ -89,7 +89,7 @@ export const About = () => {
             index: 6,
             title: "Entornos de Formación (EdF)",
             position: "1️⃣",
-            role: t("subtitle"),
+            role: t("fullstack_role"),
             year: "2024",
             quote: quotes[4]
         }

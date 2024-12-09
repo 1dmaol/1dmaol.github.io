@@ -17,23 +17,23 @@ export const Who = () => {
                 <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 2, delay: 1 }} className="md:relative md:-top-[250px] md:-right-[355px] font-[500] bg-slate-600 text-[#f1f1f1] text-lg md:text-xl font-medium mr-2 px-2.5 py-1 md:px-2.5 md:py-0.5 rounded dark:bg-gray-700 dark:text-gray-300 md:animate-bounce">Freelancer</motion.div>
 
                 <div className="flex flex-row gap-4">
+                    <DiJavascript size={36} />
                     <DiJava size={36} />
                     <DiReact size={36} />
-                    <DiJavascript size={36} />
                 </div>
             </div>
             <div className="flex flex-col gap-4 items-center">
 
-            <div className="flex flex-row text-3xl gap-4">
-                <div className="hover:scale-110 transition hover:cursor-pointer" title={t('es')} onClick={() => { history.pushState(null, null, "?locale=es"); location.reload() }}>🏠</div>
-                <div className="hover:scale-110 transition hover:cursor-pointer" title={t('en')} onClick={() => { history.pushState(null, null, "?locale=en"); location.reload() }}>☕️</div>
-                <div className="hover:scale-110 transition hover:cursor-pointer" title={t('vl')} onClick={() => { history.pushState(null, null, "?locale=vl"); location.reload() }}>🥘</div>
-            </div>
+                <div className="flex flex-row text-3xl gap-4">
+                    <div className="hover:scale-110 transition hover:cursor-pointer" title={t('es')} onClick={() => { history.pushState(null, null, "?locale=es"); location.reload() }}>🏠</div>
+                    <div className="hover:scale-110 transition hover:cursor-pointer" title={t('en')} onClick={() => { history.pushState(null, null, "?locale=en"); location.reload() }}>☕️</div>
+                    <div className="hover:scale-110 transition hover:cursor-pointer" title={t('vl')} onClick={() => { history.pushState(null, null, "?locale=vl"); location.reload() }}>🥘</div>
+                </div>
 
-            <div className="flex flex-row">
-                <GitHub namespace="1dmaol" />
-                <LinkedIn />
-            </div>
+                <div className="flex flex-row">
+                    <GitHub namespace="1dmaol" />
+                    <LinkedIn />
+                </div>
             </div>
         </section>
     )
