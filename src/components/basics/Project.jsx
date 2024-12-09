@@ -19,7 +19,7 @@ export const Project = ({ title, image = null, video = null, body, github = null
                 <div className="flex flex-col justify-between gap-8 md:flex-grow">
                     <div className="flex flex-col justify-between gap-2 md:flex-grow">
                         <h2 className="text-5xl font-bold py-2 w-full">{title}</h2>
-                        <p className="font-[500] text-2xl opacity-70">{body}</p>
+                        <p className="font-[500] text-lg md:text-2xl opacity-70">{body}</p>
                     </div>
 
                     {achievements && <AchievementsAccordition achievements={achievements} />}
@@ -27,7 +27,7 @@ export const Project = ({ title, image = null, video = null, body, github = null
                     {github && <GitHub type="forks" size="large" namespace={github.namespace} repo={github.repo} />}
 
                     {website &&
-                        <div className={"w-fit h-fit text-sm bg-[#2157AA] dark:bg-[#1B4789FF] text-white p-2 rounded-lg cursor-pointer shadow-xl flex self-center"} onClick={() => window.open(website, "_blank")}>
+                        <div className={"w-fit h-fit text-sm bg-[#374151] dark:bg-[#374151] text-white p-2 rounded-lg cursor-pointer shadow-xl flex self-center"} onClick={() => window.open(website, "_blank")}>
                             {t('go_to_website')}
                         </div>
                     }
@@ -37,9 +37,9 @@ export const Project = ({ title, image = null, video = null, body, github = null
                             {awards.map((award, index) => {
                                 return <div
                                     key={index}
-                                    className="w-fit h-fit text-md md:text-sm bg-[#2157AA] dark:bg-[#1B4789FF] gap-2 text-white p-2 rounded-lg cursor-pointer shadow-xl flex self-center items-center"
+                                    className="w-fit h-fit text-md md:text-sm bg-[#2157AA] dark:bg-[#1B4789FF] gap-2 text-white p-2 rounded-lg cursor-pointer shadow-xl flex self-center items-center flex-col md:flex-row"
                                     onClick={() => window.open(award.url, "_blank")}>
-                                    <span>{award.title}</span>
+                                    <span className="font-[500] md:text-md text-sm">{award.title}</span>
                                     {award.record && <div className="text-xs px-2 py-1 bg-[#f1f1f1] text-[#2157AA] dark:bg-[#f1f1f1] rounded dark:text-[#1B4789FF] font-[500]">{award.record.amount + " " + award.record.title}</div>}
                                 </div>
                             })}
@@ -58,7 +58,7 @@ export const Project = ({ title, image = null, video = null, body, github = null
 
                 {achievements &&
                     image ?
-                    <img src={achievements[0].image} alt="logo" className={`flex h-[250px] md:h-[400px] md:w-[550px] md:aspect-[16/10] items-center align-center rounded-lg object-contain md:object-fill`} />
+                    <img src={achievements[0].image} alt="logo" className={`flex h-[200px] md:h-[400px] md:w-[550px] md:aspect-[16/10] items-center align-center rounded-lg object-contain md:object-fill`} />
                     :
                     video && <video className="h-[250px] md:h-[350px] md:w-[500px] aspect-[16/10] items-center align-center rounded-lg object-contain md:object-fill" src={video} controls />
                 }
@@ -176,7 +176,7 @@ const Accordition = React.memo(({ item, isSelected, onClick, contentId }) => {
 
     return (
         <div className="border-b border-slate-200 dark:border-slate-700">
-            <button onClick={onClick} className="w-full flex text-lg justify-between items-center py-5 text-slate-800 dark:text-slate-200">
+            <button onClick={onClick} className="w-full flex md:text-lg text-md justify-between items-center py-4 md:py-5 text-slate-800 dark:text-slate-200">
                 <span>{item.title}</span>
                 <span id="icon-2" className="text-slate-800 dark:text-slate-200 transition-transform duration-300">
                     {isSelected ?

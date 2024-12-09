@@ -1,5 +1,5 @@
 export const referenceHeight = 2633
-export const referenceProjectsHeight = 2150
+export const referenceProjectsHeight = 2700
 export const referenceAboutHeight = 5150
 export const referenceProjectsHeightRatio = (referenceProjectsHeight * 100) / referenceHeight
 export const referenceAboutHeightRatio = (referenceAboutHeight * 100) / referenceHeight

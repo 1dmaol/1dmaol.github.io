@@ -79,7 +79,7 @@ export const About = () => {
                 url: "https://enso-prototype.onrender.com/",
                 type: "🧑🏻‍💻"
             }, {
-                name: t("project_talos_title"),
+                name: t("project_helios_title"),
                 url: "https://vikingcentro.com/",
                 type: "🧑🏻‍💻"
             }],

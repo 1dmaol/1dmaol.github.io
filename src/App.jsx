@@ -28,7 +28,7 @@ function App() {
     }, [])
 
     return (
-        <>
+        <div className="flex flex-col gap-4">
             <Header nightMode={nightMode} />
             <Who />
             <Projects />
@@ -49,7 +49,7 @@ function App() {
 
             </div>
 
-        </>
+        </div>
     )
 }
 

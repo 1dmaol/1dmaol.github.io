@@ -40,8 +40,8 @@ export const Projects = () => {
             ]
         },
         {
-            title: "Talos",
-            body: t("project_talos_body"),
+            title: "Helios",
+            body: t("project_helios_body"),
             order:1,
             fav: true,
             awards: [
@@ -56,28 +56,29 @@ export const Projects = () => {
             ],
             achievements: [
                 {
-                    title: t("project_talos_title1"),
-                    content: t("project_talos_hint1"),
+                    title: t("project_helios_title1"),
+                    content: t("project_helios_hint1"),
                     image: new URL('../assets/VikingCentroIphone15.png', import.meta.url).href
                 },
                 {
-                    title: t("project_talos_title2"),
-                    content: t("project_talos_hint2"),
+                    title: t("project_helios_title2"),
+                    content: t("project_helios_hint2"),
                     image: new URL('../assets/VikingCentroIphone15.png', import.meta.url).href
                 },
                 {
-                    title: t("project_talos_title3"),
-                    content: t("project_talos_hint3"),
+                    title: t("project_helios_title3"),
+                    content: t("project_helios_hint3"),
                     image: new URL('../assets/VikingCentroIphone15.png', import.meta.url).href
                 },
                 {
-                    title: t("project_talos_title4"),
-                    content: t("project_talos_hint4"),
+                    title: t("project_helios_title4"),
+                    content: t("project_helios_hint4"),
                     image: new URL('../assets/VikingCentroIphone15.png', import.meta.url).href
                 }
             ],
             href: "https://github.com/marcocaballero/portfolio",
             image: new URL('../assets/VikingCentroIphone15.png', import.meta.url).href,
+            website: "https://helios.marcoller.eu/",
             stack: [
                 "React",
                 "React Native",
@@ -160,7 +161,7 @@ export const Projects = () => {
     }, [page])
 
     return (
-        <section id="projects" className="w-full md:h-dvh h-full md:pb-10">
+        <section id="projects" className="w-full md:h-dvh h-full flex flex-col justify-center md:pb-10 container mx-auto">
             {
                 selected ?
                     <>
