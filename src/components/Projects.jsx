@@ -46,7 +46,7 @@ export const Projects = () => {
             fav: true,
             awards: [
                 {
-                    title: "🏋🏼 " + t("real_case") + " (Viking Centro)",
+                    title: "🏋🏼 " + t("real_case"),
                     url: "https://vikingcentro.com/",
                     record: {
                         title: t("users"),

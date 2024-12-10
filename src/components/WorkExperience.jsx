@@ -54,7 +54,7 @@ export const WorkExperience = () => {
                 { icon: DiDatabase, name: "Database" },
                 { icon: DiCode, name: "Code" }
             ],
-            role: t("subtitle"),
+            role: t("fullstack_role"),
             year: "2019 - 2022",
             achievements: [{
                 name: t("project_developer_role"),
@@ -75,7 +75,7 @@ export const WorkExperience = () => {
             ],
             url: "https://iim.webs.upv.es/",
             position: "3️⃣",
-            role: t("researcher_role") + " - " + t("subtitle"),
+            role: t("researcher_role") + " - " + t("fullstack_role"),
             year: "2021 - 2022",
             achievements: [{
                 name: t("it_degree"),
@@ -138,7 +138,7 @@ export const WorkExperience = () => {
             title: "Entornos de Formación (EdF)",
             url: "https://www.edf.global/",
             position: "1️⃣",
-            role: t("subtitle"),
+            role: t("fullstack_role"),
             description: t('we_description6'),
             stack: [
                 { icon: DiGit, name: "Git" },
