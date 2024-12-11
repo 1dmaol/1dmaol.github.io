@@ -77,7 +77,9 @@ i18n
                     regards_title: "Thanks for visiting my portfolio!",
                     regards_subtitle: "This website is developed by me, and you can see all the commits that I have made in my GitHub repository.",
                     users: "Users",
-                    fav: "Favorites"
+                    fav: "Favorites",
+                    cookie_consent: "This website uses cookies to improve your experience. By continuing to browse, you accept the use of cookies.",
+                    cookie_consent_button: "I understand",
                 }
             },
             es: {
@@ -147,6 +149,8 @@ i18n
                     regards_subtitle: "Toda esta web esta desarrollada por mi, y podrás ver todos los commits que he realizado en mi repositorio de GitHub.",
                     users: "Usuarios",
                     fav: "Favoritos",
+                    cookie_consent: "Este sitio utiliza cookies para mejorar la experiencia de usuario. Al continuar navegando, aceptas el uso de cookies.",
+                    cookie_consent_button: "Aceptar",
                 }
             },
             vl: {
@@ -216,6 +220,8 @@ i18n
                     regards_subtitle: "Toda aquesta web s'ha desenvolupat per mi, i pots veure tots els commits que he realitzat al meu repositori de GitHub.",
                     users: "Usuaris",
                     fav: "Favorits",
+                    cookie_consent: "Aquest lloc utilitza cookies per millorar l'experiencia d'usuari. Continuant a navegant, acceptes l'ús de cookies.",
+                    cookie_consent_button: "Accepte",
                 }
             },
         }
