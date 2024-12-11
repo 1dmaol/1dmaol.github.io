@@ -30,6 +30,7 @@ export const Projects = () => {
                 }
             ],
             image: new URL('../assets/EnsoIphoneMac.png', import.meta.url).href,
+            website: "https://enso.marcoller.eu/",
             //github: { namespace: "1dmaol", repo: "Enso" },
             stack: [
                 "React",
