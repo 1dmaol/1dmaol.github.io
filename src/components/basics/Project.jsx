@@ -1,11 +1,9 @@
-import { IoArrowBackOutline, IoArrowDown, IoArrowUp } from "react-icons/io5";
 import { GitHub } from "./GitHub";
 import { Tag } from "./Tag";
 import { motion } from "framer-motion"
-import { LinkedIn } from "./LinkedIn";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { FaArrowDown, FaArrowUp, FaChevronDown, FaChevronUp } from "react-icons/fa";
+import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 
 export const Project = ({ title, image = null, video = null, body, github = null, stack, onClick, href = null, website = null, awards = null, achievements = null }) => {
 
