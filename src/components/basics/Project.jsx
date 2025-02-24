@@ -155,11 +155,12 @@ const AchievementsAccordition = ({ achievements }) => {
     }, [selected])
 
     return (
-        <div className="w-full bg-slate-100 dark:bg-gradient-to-r dark:from-[#1F2836f5] dark:to-[#1F2836f8] px-6 rounded-lg shadow-lg">
+        <div className="w-full bg-slate-100 dark:bg-gradient-to-b dark:from-[#1F2836f1] dark:to-[#1F2836fe] dark:shadow-lg px-6 rounded-lg shadow-lg">
             {achievements.map((achievement, index) => {
                 return (
                     <Accordition
                         item={achievement}
+                        index={index}
                         contentId={'accord_achievement_' + index}
                         isSelected={selected === index}
                         key={index}
@@ -170,10 +171,10 @@ const AchievementsAccordition = ({ achievements }) => {
     )
 }
 
-const Accordition = React.memo(({ item, isSelected, onClick, contentId }) => {
+const Accordition = React.memo(({ item, isSelected, onClick, contentId, index }) => {
 
     return (
-        <div className="border-b border-slate-200 dark:border-slate-700">
+        <div className={index !== 0 ? "border-t border-slate-200 dark:border-slate-700" : ""}>
             <button onClick={onClick} className="w-full flex md:text-lg text-md justify-between items-center py-4 md:py-5 text-slate-800 dark:text-slate-200">
                 <span className="text-slate-900 dark:text-slate-100 font-[500]">{item.title}</span>
                 <span id="icon-2" className="text-slate-800 dark:text-slate-200 transition-transform duration-300">
