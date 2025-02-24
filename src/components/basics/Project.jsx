@@ -1,10 +1,11 @@
-import { IoArrowBackOutline } from "react-icons/io5";
+import { IoArrowBackOutline, IoArrowDown, IoArrowUp } from "react-icons/io5";
 import { GitHub } from "./GitHub";
 import { Tag } from "./Tag";
 import { motion } from "framer-motion"
 import { LinkedIn } from "./LinkedIn";
 import React, { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { FaArrowDown, FaArrowUp, FaChevronDown, FaChevronUp } from "react-icons/fa";
 
 export const Project = ({ title, image = null, video = null, body, github = null, stack, onClick, href = null, website = null, awards = null, achievements = null }) => {
 
@@ -156,9 +157,8 @@ const AchievementsAccordition = ({ achievements }) => {
     }, [selected])
 
     return (
-        <div className="w-full">
+        <div className="w-full bg-slate-100 dark:bg-gradient-to-r dark:from-[#1F2836f5] dark:to-[#1F2836f8] px-6 rounded-lg shadow-lg">
             {achievements.map((achievement, index) => {
-                console.log("achievement", achievement)
                 return (
                     <Accordition
                         item={achievement}
@@ -177,21 +177,17 @@ const Accordition = React.memo(({ item, isSelected, onClick, contentId }) => {
     return (
         <div className="border-b border-slate-200 dark:border-slate-700">
             <button onClick={onClick} className="w-full flex md:text-lg text-md justify-between items-center py-4 md:py-5 text-slate-800 dark:text-slate-200">
-                <span>{item.title}</span>
+                <span className="text-slate-900 dark:text-slate-100 font-[500]">{item.title}</span>
                 <span id="icon-2" className="text-slate-800 dark:text-slate-200 transition-transform duration-300">
                     {isSelected ?
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className="w-4 h-4">
-                            <path d="M3.75 7.25a.75.75 0 0 0 0 1.5h8.5a.75.75 0 0 0 0-1.5h-8.5Z" />
-                        </svg>
+                        <FaChevronUp />
                         :
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className="w-4 h-4">
-                            <path d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z" />
-                        </svg>
+                        <FaChevronDown />
                     }
                 </span>
             </button>
             <div id={contentId} className="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-                <div className="pb-5 text-md text-slate-500 dark:text-slate-400 px-4">
+                <div className="pb-5 text-md text-slate-500 dark:text-slate-400 px-2 text-start">
                     {item.content}
                 </div>
             </div>
