@@ -113,7 +113,7 @@ i18n
                     project_helios_hint4: "Despliege de un servidor para la gestión de las peticiones y la creación de automatizaciones.",
                     project_helios_title2: "Características básicas",
                     project_helios_hint2: "Pagos dentro de la aplicación con Stripe, generación automática de facturas y gestión de notificaciones.",
-                    project_idrill_body: "Software para la asistencia en las operaciones quirurgicas dentales en realidad aumentada",
+                    project_idrill_body: "Software para la asistencia en las operaciones quirúrgicas dentales en realidad aumentada",
                     project_idrill_title2: "Características básicas",
                     project_idrill_hint2: "Funcionalidades innovadoras como asistencia de voz, reconocimiento de imágenes, compatibilidad con cualquier estuche quirúrgico...",
                     project_idrill_title1: "¿Qué es idrill?",

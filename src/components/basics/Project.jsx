@@ -9,6 +9,8 @@ export const Project = ({ title, image = null, video = null, body, github = null
 
     const { t } = useTranslation()
 
+    const [src, setSrc] = useState(achievements[0].image)
+
     return (
         <motion.div
             animate={{ opacity: 1 }} initial={{ opacity: 0 }}
@@ -21,7 +23,7 @@ export const Project = ({ title, image = null, video = null, body, github = null
                         <p className="font-[500] text-lg md:text-2xl opacity-70">{body}</p>
                     </div>
 
-                    {achievements && <AchievementsAccordition achievements={achievements} />}
+                    {achievements && <AchievementsAccordition achievements={achievements} changeImage={setSrc} />}
 
                     {github && <GitHub type="forks" size="large" namespace={github.namespace} repo={github.repo} />}
 
@@ -57,7 +59,13 @@ export const Project = ({ title, image = null, video = null, body, github = null
 
                 {achievements &&
                     image ?
-                    <img src={achievements[0].image} alt="logo" className={`flex h-[200px] md:h-[400px] md:w-[550px] md:aspect-[16/10] items-center align-center rounded-lg object-contain md:object-fill`} />
+                    <motion.img src={src} alt="logo"
+                        key={src}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 1 }}
+                        className={`flex h-[200px] md:h-[400px] md:w-[550px] md:aspect-[16/10] items-center align-center rounded-lg object-contain md:object-fill`} />
                     :
                     video && <video className="h-[250px] md:h-[350px] md:w-[500px] aspect-[16/10] items-center align-center rounded-lg object-contain md:object-fill" src={video} controls />
                 }
@@ -132,7 +140,7 @@ const MotionText = ({ achievements }) => {
 
 }
 
-const AchievementsAccordition = ({ achievements }) => {
+const AchievementsAccordition = ({ achievements, changeImage }) => {
 
     const [selected, setSelected] = useState(null)
     const [lastSelected, setLastSelected] = useState(null)
@@ -164,7 +172,11 @@ const AchievementsAccordition = ({ achievements }) => {
                         contentId={'accord_achievement_' + index}
                         isSelected={selected === index}
                         key={index}
-                        onClick={() => { setLastSelected(selected); setSelected(selected === index ? null : index) }} />
+                        onClick={() => {
+                            setLastSelected(selected);
+                            setSelected(selected === index ? null : index)
+                            changeImage(achievement.image)
+                        }} />
                 )
             })}
         </div>

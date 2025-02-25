@@ -30,7 +30,7 @@ export const Projects = () => {
                 }
             ],
             image: new URL('../assets/EnsoIphoneMac.png', import.meta.url).href,
-            website: "https://enso.marcoller.eu/",
+            website: "https://ensosplit.com/",
             //github: { namespace: "1dmaol", repo: "Enso" },
             stack: [
                 "React",
@@ -59,26 +59,29 @@ export const Projects = () => {
                 {
                     title: t("project_helios_title1"),
                     content: t("project_helios_hint1"),
-                    image: new URL('../assets/VikingCentroIphone15.png', import.meta.url).href
+                    image: new URL('../assets/viking/VikingCentroIphone15.jpg', import.meta.url).href
                 },
                 {
                     title: t("project_helios_title2"),
                     content: t("project_helios_hint2"),
-                    image: new URL('../assets/VikingCentroIphone15.png', import.meta.url).href
+                    image: new URL('../assets/viking/project-viking-1.png', import.meta.url).href
                 },
                 {
                     title: t("project_helios_title3"),
                     content: t("project_helios_hint3"),
-                    image: new URL('../assets/VikingCentroIphone15.png', import.meta.url).href
+                    image: new URL('../assets/viking/project-viking-2.png', import.meta.url).href
                 },
                 {
                     title: t("project_helios_title4"),
                     content: t("project_helios_hint4"),
-                    image: new URL('../assets/VikingCentroIphone15.png', import.meta.url).href
+                    image: new URL('../assets/viking/VikingCentroIphone15.jpg', import.meta.url).href
                 }
             ],
             href: "https://github.com/marcocaballero/portfolio",
-            image: new URL('../assets/VikingCentroIphone15.png', import.meta.url).href,
+            image: new URL('../assets/viking/VikingCentroIphone15.jpg', import.meta.url).href,
+            shopRef: {
+                image: new URL('../assets/google-apple-store-logo.png', import.meta.url).href
+            },
             website: "https://helios.marcoller.eu/",
             stack: [
                 "React",
@@ -108,7 +111,7 @@ export const Projects = () => {
                 {
                     title: t("project_idrill_title2"),
                     content: t("project_idrill_hint2"),
-                    image: new URL('../assets/idrillonPhone.png', import.meta.url).href
+                    image: new URL('../assets/setupiDrill.png', import.meta.url).href
                 },
                 {
                     title: t("project_idrill_title3"),
