@@ -66,7 +66,7 @@ export const Project = ({ title, image = null, video = null, body, github = null
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         transition={{ duration: 1 }}
-                        className={`flex h-[250px] md:h-[400px] md:w-[550px] md:aspect-[16/10] items-center align-center rounded-xl object-contain md:object-fill`} />
+                        className={`flex h-[250px] md:h-[400px] md:w-[550px] md:aspect-[16/10] items-center align-center self-start rounded-xl object-contain md:object-fill`} />
                     :
                     video && <video className="h-[250px] md:h-[350px] md:w-[500px] aspect-[16/10] items-center align-center rounded-lg object-contain md:object-fill" src={video} controls />
                 }
