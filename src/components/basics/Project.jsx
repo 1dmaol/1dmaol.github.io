@@ -14,15 +14,16 @@ export const Project = ({ title, image = null, video = null, body, github = null
     return (
         <motion.div
             animate={{ opacity: 1 }} initial={{ opacity: 0 }}
-            className={"flex gap-4 flex-col w-full justify-center p-4 items-center gap-2"}
+            className={"flex gap-4 flex-col w-full justify-center p-4 items-center gap-2 md:gap-12"}
         >
-            <div className="flex flex-col md:flex-row gap-16 md:w-full items-center">
-                <div className="flex flex-col justify-between gap-8 md:flex-grow">
-                    <div className="flex flex-col justify-between gap-2 md:flex-grow">
-                        <h2 className="text-5xl font-bold py-2 w-full">{title}</h2>
-                        <p className="font-[500] text-lg md:text-2xl opacity-70">{body}</p>
-                    </div>
 
+            <div className="flex flex-col justify-between gap-2 md:flex-grow">
+                <h2 className="text-5xl font-bold py-2 w-full">{title}</h2>
+                <p className="font-[500] text-lg md:text-2xl opacity-70">{body}</p>
+            </div>
+
+            <div className="flex flex-col-reverse md:flex-row gap-4 md:gap-16 md:w-full items-center">
+                <div className="flex flex-col justify-between gap-4 md:gap-8 md:flex-grow">
                     {achievements && <AchievementsAccordition achievements={achievements} changeImage={setSrc} />}
 
                     {github && <GitHub type="forks" size="large" namespace={github.namespace} repo={github.repo} />}
@@ -65,7 +66,7 @@ export const Project = ({ title, image = null, video = null, body, github = null
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         transition={{ duration: 1 }}
-                        className={`flex h-[200px] md:h-[400px] md:w-[550px] md:aspect-[16/10] items-center align-center rounded-lg object-contain md:object-fill`} />
+                        className={`flex h-[250px] md:h-[400px] md:w-[550px] md:aspect-[16/10] items-center align-center rounded-xl object-contain md:object-fill`} />
                     :
                     video && <video className="h-[250px] md:h-[350px] md:w-[500px] aspect-[16/10] items-center align-center rounded-lg object-contain md:object-fill" src={video} controls />
                 }
@@ -163,7 +164,7 @@ const AchievementsAccordition = ({ achievements, changeImage }) => {
     }, [selected])
 
     return (
-        <div className="w-full bg-slate-100 dark:bg-gradient-to-b dark:from-[#1F2836f1] dark:to-[#1F2836fe] dark:shadow-lg px-6 rounded-lg shadow-lg">
+        <div className="w-full bg-slate-100 dark:bg-gradient-to-b dark:from-[#1F2836f1] dark:to-[#1F2836fe] dark:shadow-lg px-6 rounded-xl shadow-lg">
             {achievements.map((achievement, index) => {
                 return (
                     <Accordition
