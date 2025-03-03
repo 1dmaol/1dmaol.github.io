@@ -1,10 +1,9 @@
 import { useEffect, useState } from "react"
-import FadeInSection from "./basics/FadeInSection"
-import { Section } from "./basics/Section"
-import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
-import { DiAndroid, DiAngularSimple, DiApple, DiAws, DiCode, DiDatabase, DiDocker, DiGit, DiGithubBadge, DiJava, DiMysql, DiOnedrive, DiPostgresql, DiPython, DiReact, DiUnitySmall } from "react-icons/di";
+import { DiAndroid, DiAngularSimple, DiApple, DiAws, DiCode, DiDatabase, DiDocker, DiGit, DiGithubBadge, DiJava, DiMysql, DiOnedrive, DiPostgresql, DiPython, DiReact, DiRedis, DiUnitySmall } from "react-icons/di";
 import { GitHub } from "./basics/GitHub";
+import { SiRabbitmq } from "react-icons/si";
+import { VscAzureDevops } from "react-icons/vsc";
 
 
 export const WorkExperience = () => {
@@ -146,7 +145,10 @@ export const WorkExperience = () => {
                 { icon: DiAngularSimple, name: "Angular" },
                 { icon: DiAws, name: "AWS" },
                 { icon: DiMysql, name: "MySQL" },
-                { icon: DiCode, name: "Code" }
+                { icon: SiRabbitmq, name: "Rabbit MQ", size: 16},
+                { icon: DiRedis, name: "Redis"},
+                { icon: VscAzureDevops, name: "Azure Devops", size: 20},
+                { icon: DiReact, name: "React"}
             ],
             year: "2024",
             quote: quotes[4]
@@ -236,7 +238,7 @@ export const WorkExperience = () => {
                                         <div className="flex flex-row flex-wrap w-40 md:self-end self-center">
                                             {section.stack?.map((stack, index) => {
                                                 return <div className="w-10 h-10 flex items-center justify-center" title={stack.name} key={index}>
-                                                    <stack.icon size={26} />
+                                                    <stack.icon size={stack.size || 26} />
                                                 </div>
                                             })}
                                         </div>
