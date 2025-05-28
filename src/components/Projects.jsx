@@ -82,7 +82,7 @@ export const Projects = () => {
             shopRef: {
                 image: new URL('../assets/google-apple-store-logo.png', import.meta.url).href
             },
-            website: "https://helios.marcoller.eu/",
+            website: "https://helios.cappybara.ovh/",
             stack: [
                 "React",
                 "React Native",
