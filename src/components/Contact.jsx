@@ -1,4 +1,4 @@
-import FadeInSection from "./basics/FadeInSection"
+import FadeInSection from "./atoms/FadeInSection"
 
 export const Contact = () => {
     return (

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
-import FadeInSection from "./basics/FadeInSection"
-import { Section } from "./basics/Section"
+import FadeInSection from "./atoms/FadeInSection"
+import { Section } from "./organisms/Section"
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 

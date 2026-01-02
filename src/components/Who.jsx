@@ -1,15 +1,15 @@
 import { useTranslation } from "react-i18next"
-import AnimatedText from "./basics/AnimatedText"
-import { GitHub } from "./basics/GitHub"
-import { LinkedIn } from "./basics/LinkedIn"
 import { motion } from "framer-motion";
 import { DiJava, DiJavascript, DiReact } from "react-icons/di";
+import AnimatedText from "./atoms/AnimatedText";
+import { GitHub } from "./atoms/GitHub";
+import { LinkedIn } from "./atoms/LinkedIn";
 
 export const Who = () => {
     const { i18n, t } = useTranslation()
 
     return (
-        <section className="w-full h-fit md:h-dvh flex items-center justify-center flex-col gap-8">
+        <section className="w-full h-[calc(100vh-80px)] md:h-[calc(100vh-140px)] flex items-center justify-center flex-col gap-8">
             <div className="flex flex-col gap-4 items-center">
 
                 <AnimatedText className="text-8xl font-bold text-start md:text-center" text={"Marc Oller Caballé".split('')} />
