@@ -1,7 +1,7 @@
 export const vlTranslation = {
     translation: {
         title: 'Portafoli de Marc',
-        subtitle: 'Desenvolupador full stack i consultor digital',
+        subtitle: 'Enginyer de IA i desenvolupador full stack',
         researcher_role: 'Investigador',
         backend_role: 'Desenvolupador Backend',
         project_developer_role: "Desenvolupador de Projectes",

@@ -1,7 +1,7 @@
 export const enTranslation = {
     translation: {
         title: "Marc's Portfolio",
-        subtitle: 'Full-stack developer and digital consultant',
+        subtitle: 'AI Engineer and full-stack developer',
         researcher_role: 'Researcher',
         backend_role: 'Backend Developer',
         project_developer_role: "Project Developer",
