@@ -1,4 +1,5 @@
 import { Button } from "../atoms/Button"
+import { ImageWithFallback } from "../../utils/imageLoader"
 
 const BentoGrid = ({ children, className, ...props }) => {
   return (
@@ -37,7 +38,7 @@ const BentoCard = ({
     {...props}
   >
 	<div>
-		<img src={img} className="absolute opacity-15 inset-0 h-full w-full object-cover" />
+		<ImageWithFallback src={img} className="absolute opacity-15 inset-0 h-full w-full object-cover" alt={name} />
 	</div>
     <div className="p-4">
       <div className="pointer-events-none z-10 flex transform-gpu flex-col gap-1 transition-all duration-300 lg:group-hover:-translate-y-2">

@@ -3,6 +3,7 @@ import { Button } from "../atoms/Button"
 import { BentoCard, BentoGrid } from "../ui/bento-grid"
 import { FaChevronDown, FaChevronUp } from "react-icons/fa"
 import { motion, useCycle } from "framer-motion"
+import { ImageWithFallback } from "../../utils/imageLoader"
 import ProjectContext from "../../contexts/ProjectContext"
 
 export const Achievements = ({ title = null, subtitle = null, achievements, changeImage = () => { }, variant = "default" }) => {
@@ -61,7 +62,7 @@ const AchievementsModern = ({ title = null, subtitle = null, achievements }) => 
 								</p>
 							</div>
 						</div>
-						{(selectedFeature.img || selectedFeature.imageKey) && <img src={selectedFeature.imageKey ? option?.theme?.images[selectedFeature.imageKey] : selectedFeature.img} alt={selectedFeature.name} loading="lazy" className="w-full md:min-w-[32.5vw] md:max-w-[45.5vw] min-h-[250px] md:h-full object-cover md:object-contain rounded-md" />}
+						{(selectedFeature.img || selectedFeature.imageKey) && <ImageWithFallback src={selectedFeature.imageKey ? option?.theme?.images[selectedFeature.imageKey] : selectedFeature.img} alt={selectedFeature.name} className="w-full md:min-w-[32.5vw] md:max-w-[45.5vw] min-h-[250px] md:h-full object-cover md:object-contain rounded-md" />}
 					</div>
 				</div>
 				:

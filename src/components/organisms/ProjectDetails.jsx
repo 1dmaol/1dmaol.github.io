@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import { Achievements } from "../molecules/Achievements";
 import { Tag } from "../atoms/Tag";
 import { Button } from "../atoms/Button";
+import { ImageWithFallback } from "../../utils/imageLoader";
 import ProjectContext from "../../contexts/ProjectContext";
 
 const ProjectDetails = ({ title, image = null, video = null, body, github = null, stack = [], onClick, href = null, website = null, awards = null, achievements = [], features = [], variant = "default", option, scenarios = [], themes = [], setOption }) => {
@@ -101,7 +102,14 @@ const ProjectDetails = ({ title, image = null, video = null, body, github = null
 						{achievements && <Achievements achievements={achievements} changeImage={setSrc} />}
 
 						{achievements && image ?
-							<motion.img src={src} alt="preview" key={src} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 1 }} className={`flex h-[250px] md:h-[400px] md:w-[550px] md:aspect-[16/10] items-center align-center self-start rounded-xl object-contain md:object-fill`} />
+							<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 1 }}>
+								<ImageWithFallback 
+									src={src} 
+									key={src}
+									alt="preview" 
+									className={`flex h-[250px] md:h-[400px] md:w-[550px] md:aspect-[16/10] items-center align-center self-start rounded-xl object-contain md:object-fill`} 
+								/>
+							</motion.div>
 							:
 							video && <video className="h-[250px] md:h-[350px] md:w-[500px] aspect-[16/10] items-center align-center rounded-lg object-contain md:object-fill" src={video} controls />
 						}
@@ -139,7 +147,14 @@ const ProjectDetails = ({ title, image = null, video = null, body, github = null
 					</div>
 
 					{achievements && image ?
-						<motion.img src={src} alt="preview" key={src} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 1 }} className={`flex h-[250px] md:h-[400px] md:w-[550px] md:aspect-[16/10] items-center align-center self-start rounded-xl object-contain md:object-fill`} />
+						<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 1 }}>
+							<ImageWithFallback 
+								src={src} 
+								key={src}
+								alt="preview" 
+								className={`flex h-[250px] md:h-[400px] md:w-[550px] md:aspect-[16/10] items-center align-center self-start rounded-xl object-contain md:object-fill`} 
+							/>
+						</motion.div>
 						:
 						video && <video className="h-[250px] md:h-[350px] md:w-[500px] aspect-[16/10] items-center align-center rounded-lg object-contain md:object-fill" src={video} controls />
 					}
