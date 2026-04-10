@@ -68,5 +68,8 @@ export const vlTranslation = {
         fav: "Favorits",
         cookie_consent: "Aquest lloc utilitza cookies per millorar l'experiencia d'usuari. Continuant a navegant, acceptes l'ús de cookies.",
         cookie_consent_button: "Accepte",
+		contact: "📧 Contacta amb mi per email",
+		contact_subject: "Contacte desde el portfolio",
+		contact_body: "Hola Marc,%0A%0AVoldría posarme en contacte amb tu.%0A%0A%0A%0ASalutacions,%0A%0A[El teu nom]"
     }
 }

@@ -69,5 +69,8 @@ export const enTranslation = {
         fav: "Favorites",
         cookie_consent: "This website uses cookies to improve your experience. By continuing to browse, you accept the use of cookies.",
         cookie_consent_button: "I understand",
+		contact: "📧 Send me an email",
+		contact_subject: "Contact from portfolio",
+		contact_body: "Hello Marc,%0A%0AI would like to get in touch with you.%0A%0A%0A%0ABest regards,%0A%0A[Your name]"
     }
 }

@@ -68,5 +68,8 @@ export const esTranslation = {
         fav: "Favoritos",
         cookie_consent: "Este sitio utiliza cookies para mejorar la experiencia de usuario. Al continuar navegando, aceptas el uso de cookies.",
         cookie_consent_button: "Aceptar",
+		contact: "📧 Contacta conmigo por email",
+		contact_subject: "Contacto desde el portfolio",
+		contact_body: "Hola Marc,%0A%0AMe gustaría ponerme en contacto contigo.%0A%0A%0A%0ASaludos,%0A%0A[Tu nombre]"
     }
 }

@@ -24,6 +24,13 @@ function App() {
 	useEffect(() => {
 		const params = window.location.href.split('?')[1]?.split('&').map(param => param.split('=')).reduce((acc, [key, value]) => ({ ...acc, [key]: value }), {})
 		params && params['locale'] && i18n.changeLanguage(params['locale'])
+
+		const action = params && params['action'] && params['action'].split('-')
+		if (action && action[0] === 'contact' && action[1] === 'mail') {
+			window.location = "mailto:marcollerdeveloper@gmail.com?subject=" + t('contact_subject') + "&body=" + t('contact_body')
+			window.history.pushState(null, null, window.location.pathname + "?locale=" + i18n.language)
+		}
+
 	}, [])
 
 	return (
