@@ -107,7 +107,7 @@ const ProjectDetails = ({ title, image = null, video = null, body, github = null
 									src={src} 
 									key={src}
 									alt="preview" 
-									className={`flex h-[250px] md:h-[400px] md:w-[550px] md:aspect-[16/10] items-center align-center self-start rounded-xl object-contain md:object-fill`} 
+									className={`flex h-[250px] min-w-[525px] md:h-[400px] md:w-[550px] md:aspect-[16/10] items-center align-center self-start rounded-xl object-contain md:object-fill`} 
 								/>
 							</motion.div>
 							:
@@ -152,7 +152,7 @@ const ProjectDetails = ({ title, image = null, video = null, body, github = null
 								src={src} 
 								key={src}
 								alt="preview" 
-								className={`flex h-[250px] md:h-[400px] md:w-[550px] md:aspect-[16/10] items-center align-center self-start rounded-xl object-contain md:object-fill`} 
+								className={`flex h-[250px] min-w-[525px] md:h-[400px] md:w-[550px] md:aspect-[16/10] items-center align-center self-start rounded-xl object-contain md:object-fill`} 
 							/>
 						</motion.div>
 						:
