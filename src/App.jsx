@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { WorkExperience } from './components/WorkExperience'
 import CookieConsent from "react-cookie-consent";
+import { currentProjectsHeight } from './consts/sizes'
 
 function App() {
 
@@ -29,6 +30,8 @@ function App() {
 		if (action && action[0] === 'contact' && action[1] === 'mail') {
 			window.location = "mailto:marcollerdeveloper@gmail.com?subject=" + t('contact_subject') + "&body=" + t('contact_body')
 			window.history.pushState(null, null, window.location.pathname + "?locale=" + i18n.language)
+		} else if (action && action[0].includes('helios')) {
+			window.scrollTo({ top: currentProjectsHeight, behavior: 'smooth' })
 		}
 
 	}, [])
